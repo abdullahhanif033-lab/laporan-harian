@@ -1,41 +1,31 @@
-<!-- Dibuat otomatis oleh n8n (workflow: Laporan Harian) pada 2026-09-02 09:44 WIB -->
+<!-- Dibuat otomatis oleh GitHub Actions pada 2026-09-02 10:13 WIB -->
 
 # Briefing Harian — 2 September 2026
 
-Disusun otomatis 09:44 WIB | Sumber: CoinGecko, Alternative.me, Cointelegraph, BBC World
+Disusun otomatis 10:13 WIB | Sumber: CoinGecko, Alternative.me, Cointelegraph, BBC World
 
 ## Ringkasan Pagi Ini
-Pasar aset digital pagi ini cenderung mengalami koreksi dengan total kapitalisasi pasar global yang menyusut sebesar 3,88%. Sentimen investor sedikit mendingin akibat tekanan dari pasar obligasi global dan meningkatnya ketegangan geopolitik di Timur Tengah. Meskipun mayoritas altcoin memerah, Bitcoin menunjukkan ketahanan relatif yang menjaga dominasinya tetap kokoh di atas 59%.
+Pasar kripto dibuka dalam zona merah pagi ini dengan total kapitalisasi pasar tergerus 3.76% menjadi $2.63 triliun dalam 24 jam terakhir. Pelemahan aset digital terjadi berbarengan dengan gejolak di pasar keuangan makro, di mana lonjakan imbal hasil obligasi global menahan pergerakan Bitcoin di kisaran $77.000 hingga $78.000. Meskipun harga cenderung terkoreksi, perkembangan infrastruktur dan keterlibatan lembaga keuangan tradisional terus menunjukkan tren adopsi yang solid. Sentimen pasar secara umum masih bertahan di area keserakahan (Greed), meski memperlihatkan indikasi pendinginan dibanding hari sebelumnya.
 
 ## Pasar Crypto
 
 | Aset | Harga | 24 Jam | Kapitalisasi Pasar |
-| :--- | :--- | :--- | :--- |
-| BTC (Bitcoin) | $77159 | -1.49% | $1.55 triliun |
-| ETH (Ethereum) | $2405.36 | -2.23% | $290.4 miliar |
-| USDT (Tether) | $0.999623 | -0.01% | $183.3 miliar |
-| BNB (BNB) | $684.78 | -0.91% | $91.2 miliar |
-| XRP (XRP) | $1.34 | -2.15% | $84.3 miliar |
-| USDC (USDC) | $0.9998 | -0.00% | $73.6 miliar |
-| SOL (Solana) | $99.65 | -3.37% | $58.3 miliar |
-| TRX (TRON) | $0.321707 | -3.20% | $30.5 miliar |
+| --- | --- | --- | --- |
+| BTC (Bitcoin) | $77504 | -1.21% | $1.56 triliun |
+| ETH (Ethereum) | $2416.52 | -1.99% | $291.5 miliar |
+| USDT (Tether) | $0.999562 | -0.02% | $183.3 miliar |
+| BNB (BNB) | $687.88 | -0.68% | $91.6 miliar |
+| XRP (XRP) | $1.35 | -1.74% | $84.8 miliar |
+| USDC (USDC) | $0.99974 | -0.01% | $73.6 miliar |
+| SOL (Solana) | $100.26 | -3.00% | $58.7 miliar |
+| TRX (TRON) | $0.321906 | -3.08% | $30.6 miliar |
 
-Pergerakan harga dalam 24 jam terakhir didominasi oleh aksi jual, di mana Solana (SOL) dan TRON (TRX) memimpin penurunan di jajaran aset utama dengan koreksi lebih dari 3%. Bitcoin relatif lebih stabil dibandingkan altcoin, yang menyebabkan dominasi BTC merangkak naik ke level 59,1%. Fenomena ini mengindikasikan bahwa investor cenderung beralih ke aset yang lebih likuid dan mapan di tengah ketidakpastian pasar.
+Di antara delapan koin berkapitalisasi terbesar, penurunan ter tajam dialami oleh TRON (TRX) sebesar -3.08% dan Solana (SOL) sebesar -3.00%. Sementara itu, Bitcoin (BTC) dan Ethereum (ETH) mengalami penurunan yang lebih terbatas masing-masing sebesar -1.21% dan -1.99%. Pergerakan dua koin stabil utama, USDT dan USDC, tercatat relatif datar.
 
-Indeks Fear & Greed hari ini berada di angka 63 (Greed), turun dari angka 69 (Greed) kemarin. Penurunan ini mencerminkan berkurangnya optimisme pasar setelah gagal mempertahankan momentum penguatan. Meski masih berada di zona serakah, pergeseran angka ini menunjukkan sikap yang lebih berhati-hati dari para pelaku pasar ritel.
+Dominasi Bitcoin saat ini berada di level 59.1%, sedangkan dominasi Ethereum mencatatkan angka 11.1%. Porsi dominasi BTC yang tinggi mengindikasikan bahwa sebagian besar kapitalisasi pasar masih terkonsentrasi pada aset utama ini di tengah penurunan tajam pada altcoin.
+
+Indeks Fear & Greed hari ini mencatatkan angka 63 (Greed), turun dari angka 69 (Greed) pada hari sebelumnya. Penurunan ini menunjukkan bahwa kewaspadaan pelaku pasar mulai meningkat seiring koreksi harga, walaupun psikologi pasar secara keseluruhan belum sepenuhnya bergeser ke zona netral atau ketakutan.
 
 ## Berita & Kebijakan Penting
-* **SEC usulkan modernisasi aturan agen transfer dengan pemanfaatan blockchain.** Langkah ini penting karena akan memperbarui regulasi era 1980-an untuk mengakomodasi pencatatan berbasis token, yang bisa mempercepat integrasi teknologi blockchain ke infrastruktur pasar modal arus utama.
-* **Aliansi 21 institusi besar termasuk BofA, Citi, dan Goldman Sachs berencana luncurkan stablecoin.** Keterlibatan bank-bank raksasa global ini menandakan persaingan serius bagi pemain stablecoin yang sudah ada dan memperkuat posisi dolar digital dalam sistem keuangan global.
-* **Binance luncurkan opsi saham AS dan ETF untuk pengguna non-AS.** Inisiatif ini memungkinkan akses ke 1.000 instrumen TradFi melalui satu akun crypto, yang berpotensi menarik likuiditas besar dari pasar saham tradisional ke ekosistem bursa crypto.
-* **Iran lancarkan serangan balasan terhadap target Amerika Serikat.** Eskalasi militer di Timur Tengah ini menjadi risiko makro utama yang dapat memicu volatilitas tinggi pada aset berisiko dan mempengaruhi harga energi serta komoditas global.
-* **Ethena rilis aplikasi pembayaran USDe dengan imbalan tahunan 6%.** Produk ini berupaya mendorong utilitas crypto sebagai alat pembayaran harian dan tabungan, memberikan insentif bagi pengguna untuk tetap berada di dalam ekosistem DeFi.
-
-## Agenda yang Perlu Diperhatikan
-* Pemantauan berkelanjutan terhadap imbal hasil obligasi 10 tahun Jepang (JGB) yang baru saja menyentuh level tertinggi dalam 30 tahun.
-* Reaksi pasar global terhadap perkembangan konflik militer antara Iran dan Amerika Serikat di Timur Tengah.
-* Periode peninjauan publik atas proposal aturan baru SEC terkait tokenisasi sekuritas (perkiraan).
-* Rilis detail operasional lebih lanjut mengenai usaha patungan stablecoin perbankan G7 (perkiraan).
-
-## Catatan Hari Ini
-Pasar saat ini sedang terjepit di antara sentimen positif dari adopsi institusional perbankan dan risiko nyata dari ketegangan geopolitik. Koreksi hari ini merupakan peringatan bahwa volatilitas bisa meningkat kapan saja jika situasi di Timur Tengah memburuk. Tetap waspada pada level pertahanan Bitcoin karena dominasinya yang tinggi membuat pergerakan BTC akan sangat mendikte arah altcoin lainnya.
+* **Konsorsium Perbankan Raksasa (BofA, Citi, Goldman Sachs) Rencanakan Peluncuran Stablecoin**: Sebanyak 21 lembaga keuangan terkemuka bersiap meluncurkan proyek stablecoin berpatokan Dolar AS sebelum merambah ke mata uang G7 lainnya. *Mengapa ini penting*: Masuknya institusi keuangan terbesar dunia akan meningkatkan persaingan di industri stablecoin dan mempercepat jembatan antara TradFi dan aset digital.
+* **SEC Usulkan Pembaruan Aturan Transfer Agent Berbasis Blockchain**: Komisi Pasar Modal AS (SEC) mengajukan pembaruan aturan
