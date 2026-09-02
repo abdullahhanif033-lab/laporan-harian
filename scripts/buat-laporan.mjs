@@ -706,7 +706,12 @@ function markdownKeHtml(md, grafik) {
       tutupDaftar();
       const berkas = gbr[1];
       const cocok = Object.values(grafik).find(g => g.nama === berkas);
-      if (cocok) keluar.push(`<figure>${cocok.svg}</figure>`);
+      if (cocok) {
+        keluar.push(
+          `<figure><div class="gulir-grafik">${cocok.svg}</div>` +
+          `<figcaption class="petunjuk">Geser grafik ke samping untuk melihat penuh</figcaption></figure>`
+        );
+      }
       i++;
       continue;
     }
@@ -764,8 +769,13 @@ h1{font-size:1.6rem;line-height:1.25;margin:.2em 0 .5em;letter-spacing:-.01em}
 h2{font-size:1.15rem;margin:1.9em 0 .5em;padding-top:.9em;border-top:1px solid var(--gr)}
 h3{font-size:1rem;margin:1.4em 0 .4em}
 p{margin:.7em 0}ul{margin:.6em 0;padding-left:1.25em}li{margin:.45em 0}
-figure{margin:1.4em 0;padding:10px;background:#fff;border:1px solid var(--gr);border-radius:14px;overflow-x:auto}
-figure svg{display:block}
+figure{margin:1.4em 0;padding:10px;background:#fff;border:1px solid var(--gr);border-radius:14px}
+.gulir-grafik{overflow-x:auto;-webkit-overflow-scrolling:touch}
+/* Di layar sempit grafik digeser, bukan diciutkan - label angka jadi tak terbaca
+   kalau dipaksa muat, padahal setiap mark memang wajib membawa labelnya. */
+figure svg{display:block;min-width:620px}
+.petunjuk{display:none;font-size:.7rem;color:#5b6472;padding:6px 2px 0;text-align:center}
+@media(max-width:760px){.petunjuk{display:block}}
 .gulir{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
 table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:420px}
 th,td{padding:9px 11px;border-bottom:1px solid var(--gr);text-align:left;white-space:nowrap}
