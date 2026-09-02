@@ -14,13 +14,15 @@ import { writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  kartuMetrik, grafikTren, grafikPerubahan, grafikSentimen,
+  kartuMetrik, grafikTren, grafikPerubahan, grafikSentimen, petaGelembung,
   angka, uangRingkas, persen, WARNA
 } from './grafik.mjs';
 
 const AKAR = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FOLDER_LAPORAN = join(AKAR, 'harian');
 const FOLDER_ASET = join(FOLDER_LAPORAN, 'aset');
+
+const STABLECOIN = ['usdt', 'usdc', 'dai', 'usde', 'fdusd', 'usds', 'pyusd', 'tusd', 'usd1'];
 
 const MODEL_PILIHAN = [
   process.env.GEMINI_MODEL,
@@ -84,17 +86,67 @@ async function ambilSemua() {
 
   const tugas = [
     ['koin', async () => {
+      // 100 koin teratas dengan perubahan multi-waktu — model data yang sama
+      // dengan CryptoBubbles, tapi lewat API resmi CoinGecko.
       const d = await ambil(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc' +
-        '&per_page=15&page=1&price_change_percentage=24h'
+        '&per_page=100&page=1&price_change_percentage=1h,24h,7d,30d'
       );
       mentah.koin = d;
-      teks.harga = d.map(c => {
+
+      teks.harga = d.slice(0, 15).map(c => {
         const ubah = c.price_change_percentage_24h == null ? 'tidak tersedia' : persen(c.price_change_percentage_24h);
         return `${String(c.symbol).toUpperCase()} (${c.name}): harga $${angka(c.current_price)}` +
                ` | 24 jam: ${ubah} | kapitalisasi pasar: ${uangRingkas(c.market_cap)}` +
                ` | volume 24 jam: ${uangRingkas(c.total_volume)}`;
       }).join('\n');
+
+      const u = (c, k) => c[`price_change_percentage_${k}_in_currency`];
+      const layak = d.filter(c => !STABLECOIN.includes(c.symbol) && c.market_cap > 0);
+
+      const naik7h = [...layak].sort((a, b) => (u(b, '7d') ?? -999) - (u(a, '7d') ?? -999)).slice(0, 8);
+      const turun7h = [...layak].sort((a, b) => (u(a, '7d') ?? 999) - (u(b, '7d') ?? 999)).slice(0, 5);
+
+      const garis = c =>
+        `${String(c.symbol).toUpperCase()} (${c.name}): 1 jam ${persen(u(c, '1h'))} | 24 jam ${persen(u(c, '24h'))}` +
+        ` | 7 hari ${persen(u(c, '7d'))} | 30 hari ${persen(u(c, '30d'))}` +
+        ` | kapitalisasi ${uangRingkas(c.market_cap)} | volume/kapitalisasi ${angka((c.total_volume / c.market_cap) * 100, 1)}%`;
+
+      teks.gerakan =
+        'NAIK PALING TAJAM 7 HARI:\n' + naik7h.map(garis).join('\n') +
+        '\n\nTURUN PALING TAJAM 7 HARI:\n' + turun7h.map(garis).join('\n');
+
+      // Sinyal kandidat — semuanya hitungan sendiri dari data di atas.
+      const sinyal = [];
+      for (const c of layak) {
+        const h1 = u(c, '1h'), h24 = u(c, '24h'), h7 = u(c, '7d'), h30 = u(c, '30d');
+        const rasioVolume = (c.total_volume / c.market_cap) * 100;
+        const alasan = [];
+
+        if (h7 > 15 && h24 < 0) alasan.push(`naik ${persen(h7)} sepekan tapi terkoreksi ${persen(h24)} hari ini — tarikan napas dalam tren naik`);
+        if (h30 < -20 && h7 > 10) alasan.push(`turun ${persen(h30)} sebulan tapi berbalik ${persen(h7)} sepekan — kemungkinan pembalikan arah`);
+        if (rasioVolume > 40) alasan.push(`volume 24 jam setara ${angka(rasioVolume, 0)}% kapitalisasinya — perhatian pasar sedang memuncak`);
+        if (h7 > 25 && h30 > 40) alasan.push(`menguat ${persen(h7)} sepekan dan ${persen(h30)} sebulan — tren kuat yang berkelanjutan`);
+
+        if (alasan.length) {
+          sinyal.push(`${String(c.symbol).toUpperCase()} (${c.name}, peringkat #${c.market_cap_rank}): ${alasan.join('; ')}`);
+        }
+      }
+      teks.kandidat = sinyal.length
+        ? sinyal.slice(0, 10).join('\n')
+        : 'Tidak ada koin yang memenuhi ambang sinyal hari ini.';
+    }],
+
+    ['sektor', async () => {
+      const d = await ambil('https://api.coingecko.com/api/v3/coins/categories');
+      const layak = d.filter(k => k.market_cap > 5e8 && k.market_cap_change_24h != null);
+      mentah.sektor = layak;
+      const naik = [...layak].sort((a, b) => b.market_cap_change_24h - a.market_cap_change_24h).slice(0, 6);
+      const turun = [...layak].sort((a, b) => a.market_cap_change_24h - b.market_cap_change_24h).slice(0, 4);
+      const garis = k => `${k.name}: ${persen(k.market_cap_change_24h)} dalam 24 jam | kapitalisasi sektor ${uangRingkas(k.market_cap)}`;
+      teks.sektor =
+        'SEKTOR PALING KUAT:\n' + naik.map(garis).join('\n') +
+        '\n\nSEKTOR PALING LEMAH:\n' + turun.map(garis).join('\n');
     }],
 
     ['global', async () => {
@@ -224,10 +276,40 @@ async function buatGrafik(mentah, waktu) {
     await simpan('btc7hari', 'bitcoin-7-hari', grafikTren(titik, { judul: 'Bitcoin — 7 hari terakhir (USD)' }));
   }
 
+  // 3b — Peta gelembung: sebaran perubahan 7 hari (model CryptoBubbles)
+  if (mentah.koin?.length) {
+    const gelembung = mentah.koin
+      .filter(c => !STABLECOIN.includes(c.symbol) && c.market_cap > 0)
+      .slice(0, 30)
+      .map(c => ({
+        simbol: String(c.symbol).toUpperCase(),
+        kapitalisasi: c.market_cap,
+        ubah7h: c.price_change_percentage_7d_in_currency ?? 0
+      }));
+    await simpan('gelembung', 'peta-gelembung', petaGelembung(gelembung, {
+      judul: 'Peta pasar — 30 koin teratas, perubahan 7 hari',
+      kunciUbah: 'ubah7h',
+      labelSumbu: '7 hari'
+    }));
+  }
+
+  // 3c — Performa sektor 24 jam
+  if (mentah.sektor?.length) {
+    const urut = [...mentah.sektor].sort((a, b) => b.market_cap_change_24h - a.market_cap_change_24h);
+    const baris = [...urut.slice(0, 6), ...urut.slice(-4)].map(k => ({
+      label: k.name.length > 22 ? k.name.slice(0, 21) + '…' : k.name,
+      nilai: k.market_cap_change_24h,
+      catatan: uangRingkas(k.market_cap)
+    }));
+    await simpan('sektor', 'sektor-24-jam', grafikPerubahan(baris, {
+      judul: 'Sektor terkuat dan terlemah — 24 jam'
+    }));
+  }
+
   // 3 — Perubahan 24 jam koin utama
   if (mentah.koin?.length) {
     const baris = mentah.koin
-      .filter(c => !['usdt', 'usdc', 'dai', 'usde', 'fdusd'].includes(c.symbol))
+      .filter(c => !STABLECOIN.includes(c.symbol))
       .slice(0, 10)
       .map(c => ({
         label: String(c.symbol).toUpperCase(),
@@ -310,9 +392,25 @@ itu justru sinyal yang menarik.)
 (3-6 poin bullet dari berita di DATA yang benar-benar berdampak. Tiap poin: 1-2 kalimat isi,
 lalu satu kalimat "Kenapa penting:". Abaikan gosip, iklan, dan berita harga harian.)
 
+## Rotasi Sektor
+(2-3 kalimat: narasi/sektor mana yang menguat dan melemah 24 jam ini menurut DATA sektor, dan
+apa artinya soal ke mana modal sedang berpindah. Sebut angkanya.)
+
 ## Yang Sedang Ramai Dibicarakan
 (2-4 kalimat dari data koin trending, percakapan Reddit, dan sorotan komunitas. Perlakukan ini
 sebagai indikator perhatian ritel, BUKAN indikator kualitas aset — katakan itu secara eksplisit.)
+
+## Kandidat untuk Diteliti
+(Ambil 3-5 koin dari DATA SINYAL KANDIDAT. Untuk tiap koin tulis satu bullet:
+**SIMBOL (Nama)** — sinyalnya apa dengan angkanya, lalu satu kalimat alasan mikro (apa yang
+terjadi pada koin itu sendiri) dan satu kalimat alasan makro (kondisi pasar/sektor yang
+mendukung atau melawannya). Kalau alasan mikronya tidak diketahui dari DATA, tulis terus terang
+"pemicunya belum diketahui dari data hari ini".
+
+Tutup bagian ini dengan kalimat ini persis: "Ini hasil pemindaian angka, bukan rekomendasi.
+Sinyal di sini baru layak ditindaklanjuti setelah dibedah mendalam — suplai, unlock, pendana,
+dan whitepaper-nya." Kalau DATA menyatakan tidak ada yang memenuhi ambang, katakan apa adanya
+bahwa hari ini tidak ada kandidat dan itu wajar.)
 
 ## Sisi Lain
 (2-4 kalimat. Argumen yang melawan pembacaan utama di bagian pertama. Kalau pembacaanmu
@@ -339,6 +437,15 @@ ${teks.harga ?? 'tidak tersedia'}
 
 [PASAR GLOBAL CRYPTO — CoinGecko]
 ${teks.global ?? 'tidak tersedia'}
+
+[PERGERAKAN MULTI-WAKTU — CoinGecko, 100 koin teratas dipindai]
+${teks.gerakan ?? 'tidak tersedia'}
+
+[PERFORMA SEKTOR 24 JAM — CoinGecko]
+${teks.sektor ?? 'tidak tersedia'}
+
+[SINYAL KANDIDAT — hasil pemindaian saya sendiri atas 100 koin teratas]
+${teks.kandidat ?? 'tidak tersedia'}
 
 [PERGERAKAN BITCOIN 7 HARI — CoinGecko]
 ${teks.btc7hari ?? 'tidak tersedia'}
@@ -429,7 +536,9 @@ async function tanyaGemini(prompt, kunci) {
 function sisipkanGrafik(md, grafik) {
   const tempat = [
     ['## Pasar Crypto', ['kpi', 'ubah24j']],
-    ['## Sentimen Pasar', ['sentimen', 'btc7hari']]
+    ['## Sentimen Pasar', ['sentimen', 'btc7hari']],
+    ['## Rotasi Sektor', ['sektor']],
+    ['## Kandidat untuk Diteliti', ['gelembung']]
   ];
 
   let hasil = md;

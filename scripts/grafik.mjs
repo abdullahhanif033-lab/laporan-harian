@@ -190,7 +190,88 @@ export function grafikPerubahan(baris, { judul }) {
   return bungkus(lebar, tinggi, bagian.join('\n'), judul);
 }
 
-/* ------------------------------------------- 4. Indeks Fear & Greed 30 hari */
+/* ------------------------------------ 4. Peta gelembung (gaya CryptoBubbles)
+
+   Sumbu mendatar = perubahan harga, luas lingkaran = kapitalisasi pasar.
+   Warna hanya membawa arah (naik/turun); setiap gelembung tetap membawa
+   label simbol dan angkanya, sesuai aturan relief di diagram.md.          */
+
+export function petaGelembung(koin, { judul, kunciUbah = 'ubah7h', labelSumbu = '7 hari' }) {
+  const lebar = 840, tinggi = 430;
+  const kiri = 40, kanan = 40, atas = 74, bawah = 46;
+  const lebarPlot = lebar - kiri - kanan;
+  const tinggiPlot = tinggi - atas - bawah;
+
+  const nilai = koin.map(k => k[kunciUbah] ?? 0);
+  const maksAbs = Math.max(10, ...nilai.map(Math.abs));
+  const maksKap = Math.max(...koin.map(k => k.kapitalisasi || 1));
+
+  const px = v => kiri + lebarPlot / 2 + (v / maksAbs) * (lebarPlot / 2 - 46);
+  const jari = kap => 13 + 28 * Math.sqrt((kap || 1) / maksKap);
+
+  // Penempatan serakah: gelembung terbesar lebih dulu, yang kecil mengisi celah.
+  // Pencarian melingkar — kalau posisi ideal penuh, geser memutar dengan
+  // pergeseran mendatar ditahan supaya posisinya tetap mewakili angkanya.
+  const urut = [...koin].sort((a, b) => (b.kapitalisasi || 0) - (a.kapitalisasi || 0));
+  const taruh = [];
+  const tengahY = atas + tinggiPlot / 2;
+
+  for (const k of urut) {
+    const r = jari(k.kapitalisasi);
+    const xIdeal = px(k[kunciUbah] ?? 0);
+    let ditempatkan = false;
+
+    const muat = (x, y) =>
+      y - r >= atas && y + r <= atas + tinggiPlot &&
+      x - r >= 4 && x + r <= lebar - 4 &&
+      !taruh.some(t => Math.hypot(t.x - x, t.y - y) < t.r + r + 2.5);
+
+    if (muat(xIdeal, tengahY)) {
+      taruh.push({ ...k, x: xIdeal, y: tengahY, r });
+      continue;
+    }
+
+    for (let jarak = 6; jarak <= 200 && !ditempatkan; jarak += 5) {
+      for (let langkah = 0; langkah < 24 && !ditempatkan; langkah++) {
+        const sudut = (langkah / 24) * Math.PI * 2;
+        const x = xIdeal + Math.cos(sudut) * jarak * 0.32; // geser mendatar ditahan
+        const y = tengahY + Math.sin(sudut) * jarak;
+        if (muat(x, y)) { taruh.push({ ...k, x, y, r }); ditempatkan = true; }
+      }
+    }
+  }
+
+  const bagian = [];
+  bagian.push(teks(kiri, 30, judul, { ukuran: 15, tebal: 700 }));
+  bagian.push(teks(kiri, 50, `Luas lingkaran = kapitalisasi pasar · posisi mendatar = perubahan ${labelSumbu}`,
+    { ukuran: 11.5, warna: WARNA.redup }));
+
+  // garis nol dan skala
+  const xNol = px(0);
+  bagian.push(`<line x1="${xNol}" y1="${atas}" x2="${xNol}" y2="${atas + tinggiPlot}" stroke="${WARNA.garis}" stroke-width="1.5"/>`);
+  bagian.push(teks(xNol, tinggi - 16, '0%', { ukuran: 11, warna: WARNA.redup, anchor: 'middle' }));
+  bagian.push(teks(kiri + 4, tinggi - 16, `−${angka(maksAbs, 0)}%`, { ukuran: 11, warna: WARNA.buruk }));
+  bagian.push(teks(lebar - kanan - 4, tinggi - 16, `+${angka(maksAbs, 0)}%`, { ukuran: 11, warna: WARNA.baik, anchor: 'end' }));
+
+  for (const b of taruh) {
+    const v = b[kunciUbah] ?? 0;
+    const warna = v >= 0 ? WARNA.teal : WARNA.buruk;
+    bagian.push(`<circle cx="${b.x.toFixed(1)}" cy="${b.y.toFixed(1)}" r="${b.r.toFixed(1)}" fill="${warna}" opacity="0.16" stroke="${warna}" stroke-width="1.5"/>`);
+    bagian.push(teks(b.x, b.y - 2, b.simbol, { ukuran: Math.min(14, Math.max(9, b.r / 2.6)), tebal: 700, anchor: 'middle' }));
+    bagian.push(teks(b.x, b.y + 13, persen(v, Math.abs(v) >= 10 ? 0 : 1), {
+      ukuran: Math.min(12, Math.max(8.5, b.r / 3.2)), tebal: 650, warna, anchor: 'middle'
+    }));
+  }
+
+  if (taruh.length < koin.length) {
+    bagian.push(teks(lebar - kanan, 50, `${koin.length - taruh.length} koin tidak muat ditampilkan`,
+      { ukuran: 10.5, warna: WARNA.redup, anchor: 'end' }));
+  }
+
+  return bungkus(lebar, tinggi, bagian.join('\n'), judul);
+}
+
+/* ------------------------------------------- 5. Indeks Fear & Greed 30 hari */
 
 export function grafikSentimen(titik, { judul }) {
   const lebar = 840, tinggi = 260;
