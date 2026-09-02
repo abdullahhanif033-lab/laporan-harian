@@ -16,7 +16,8 @@ concurrency:
 jobs:
   susun:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Cukup untuk menunggu Gemini pulih kalau sedang kelebihan beban.
+    timeout-minutes: 20
 
     steps:
       - name: Ambil isi repo

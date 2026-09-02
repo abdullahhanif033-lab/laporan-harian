@@ -503,28 +503,52 @@ async function panggilGemini(model, prompt, kunci) {
   return teks;
 }
 
+const tidur = ms => new Promise(r => setTimeout(r, ms));
+
 async function tanyaGemini(prompt, kunci) {
   const dicoba = [];
   const antrean = [...MODEL_PILIHAN];
+  // Model kelebihan beban itu keadaan sesaat, bukan salah konfigurasi.
+  // Laporan pagi tidak boleh batal hanya karena antrean Google sedang padat.
+  const JEDA_ULANG = [12000, 30000, 60000];
 
   while (antrean.length) {
     const model = antrean.shift();
     if (dicoba.includes(model)) continue;
     dicoba.push(model);
 
-    try {
-      console.log(`  mencoba model ${model}...`);
-      const teks = await panggilGemini(model, prompt, kunci);
-      console.log(`  [ok] model ${model} dipakai`);
-      return teks;
-    } catch (e) {
-      console.log(`  [gagal] ${model} — ${e.message.slice(0, 120)}`);
-      if (e.status === 404 && e.modelUsulan && !dicoba.includes(e.modelUsulan)) {
-        console.log(`  Google menyarankan ${e.modelUsulan}, dicoba berikutnya.`);
-        antrean.unshift(e.modelUsulan);
-      }
-      if ([400, 401, 403, 429].includes(e.status)) {
-        throw new Error(`Gemini menolak (${e.message.slice(0, 200)})`);
+    for (let percobaan = 0; percobaan <= JEDA_ULANG.length; percobaan++) {
+      try {
+        console.log(`  mencoba model ${model}${percobaan ? ` (ulangan ke-${percobaan})` : ''}...`);
+        const teks = await panggilGemini(model, prompt, kunci);
+        console.log(`  [ok] model ${model} dipakai`);
+        return teks;
+      } catch (e) {
+        console.log(`  [gagal] ${model} — ${e.message.slice(0, 120)}`);
+
+        // Kunci salah atau kuota habis: mencoba model lain tidak ada gunanya.
+        if ([400, 401, 403].includes(e.status)) {
+          throw new Error(`Gemini menolak (${e.message.slice(0, 200)})`);
+        }
+
+        // Model dihentikan: ikuti penggantinya yang disebut Google.
+        if (e.status === 404) {
+          if (e.modelUsulan && !dicoba.includes(e.modelUsulan)) {
+            console.log(`  Google menyarankan ${e.modelUsulan}, dicoba berikutnya.`);
+            antrean.unshift(e.modelUsulan);
+          }
+          break;
+        }
+
+        // Sesaat (kelebihan beban / terlalu sering): tunggu, lalu ulangi model yang sama.
+        const sesaat = e.status === 429 || (e.status >= 500 && e.status < 600);
+        if (sesaat && percobaan < JEDA_ULANG.length) {
+          const jeda = JEDA_ULANG[percobaan];
+          console.log(`  Sifatnya sesaat — menunggu ${jeda / 1000} detik lalu mengulang.`);
+          await tidur(jeda);
+          continue;
+        }
+        break;
       }
     }
   }
