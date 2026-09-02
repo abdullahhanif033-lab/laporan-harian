@@ -1,0 +1,45 @@
+name: Laporan Harian
+
+on:
+  schedule:
+    # 23:00 UTC = 06:00 WIB keesokan harinya
+    - cron: '0 23 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: laporan-harian
+  cancel-in-progress: false
+
+jobs:
+  susun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Ambil isi repo
+        uses: actions/checkout@v4
+
+      - name: Siapkan Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Susun laporan
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/buat-laporan.mjs
+
+      - name: Simpan hasil ke repo
+        run: |
+          git config user.name "laporan-harian-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add harian/
+          if git diff --staged --quiet; then
+            echo "Tidak ada perubahan untuk disimpan."
+          else
+            git commit -m "Laporan harian $(TZ=Asia/Jakarta date +%Y-%m-%d)"
+            git push
+          fi
