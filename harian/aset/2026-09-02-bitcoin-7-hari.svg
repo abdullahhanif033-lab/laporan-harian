@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="100%" role="img" aria-label="Bitcoin — 7 hari terakhir (USD)" style="max-width:840px;height:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+<rect width="840" height="300" rx="14" fill="#ffffff"/>
+<text x="70" y="30" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Bitcoin — 7 hari terakhir (USD)</text>
+<line x1="70" y1="254" x2="810" y2="254" stroke="#e3e6ea" stroke-width="1"/>
+<text x="60" y="258" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$76.903</text>
+<line x1="70" y1="188.6666666666669" x2="810" y2="188.6666666666669" stroke="#e3e6ea" stroke-width="1"/>
+<text x="60" y="192.6666666666669" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$78.196</text>
+<line x1="70" y1="123.33333333333309" x2="810" y2="123.33333333333309" stroke="#e3e6ea" stroke-width="1"/>
+<text x="60" y="127.33333333333309" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$79.489</text>
+<line x1="70" y1="58" x2="810" y2="58" stroke="#e3e6ea" stroke-width="1"/>
+<text x="60" y="62" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$80.782</text>
+<path d="M70.0,147.1 L175.7,83.9 L281.4,207.6 L387.1,187.2 L492.9,215.8 L598.6,170.6 L704.3,228.1 L810.0,221.5 L810.0,254.0 L70.0,254.0 Z" fill="#4A3AA7" opacity="0.10"/>
+<path d="M70.0,147.1 L175.7,83.9 L281.4,207.6 L387.1,187.2 L492.9,215.8 L598.6,170.6 L704.3,228.1 L810.0,221.5" fill="none" stroke="#4A3AA7" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70.0" cy="147.1" r="5" fill="#4A3AA7"/>
+<text x="70" y="133.1250303468982" font-size="12" fill="#0b0b0b" font-weight="650" text-anchor="start">$79.018</text>
+<text x="70" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Kam 27</text>
+<circle cx="175.7" cy="83.9" r="3.5" fill="#4A3AA7"/>
+<text x="175.71428571428572" y="69.941176470588" font-size="12" fill="#0b0b0b" font-weight="650" text-anchor="middle">$80.268</text>
+<text x="175.71428571428572" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Jum 28</text>
+<circle cx="281.4" cy="207.6" r="3.5" fill="#4A3AA7"/>
+<text x="281.42857142857144" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Sab 29</text>
+<circle cx="387.1" cy="187.2" r="3.5" fill="#4A3AA7"/>
+<text x="387.1428571428571" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Min 30</text>
+<circle cx="492.9" cy="215.8" r="3.5" fill="#4A3AA7"/>
+<text x="492.85714285714283" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Sen 31</text>
+<circle cx="598.6" cy="170.6" r="3.5" fill="#4A3AA7"/>
+<text x="598.5714285714286" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Sel 1</text>
+<circle cx="704.3" cy="228.1" r="3.5" fill="#4A3AA7"/>
+<text x="704.2857142857142" y="214.058823529412" font-size="12" fill="#0b0b0b" font-weight="650" text-anchor="middle">$77.416</text>
+<text x="704.2857142857142" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Rab 2</text>
+<circle cx="810.0" cy="221.5" r="5" fill="#4A3AA7"/>
+<text x="810" y="207.54806718882395" font-size="12" fill="#0b0b0b" font-weight="650" text-anchor="end">$77.545</text>
+<text x="810" y="282" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">Rab 2</text>
+</svg>
