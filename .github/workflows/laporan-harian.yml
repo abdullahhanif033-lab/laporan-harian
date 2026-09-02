@@ -37,7 +37,8 @@ jobs:
         run: |
           git config user.name "laporan-harian-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add harian/
+          # index.html ikut disimpan karena itulah yang disajikan GitHub Pages.
+          git add harian/ index.html
           if git diff --staged --quiet; then
             echo "Tidak ada perubahan untuk disimpan."
           else
