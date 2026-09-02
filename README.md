@@ -7,22 +7,59 @@ di server GitHub, jadi **laptop tidak perlu menyala**.
 ## Isi repo
 
 ```
-scripts/buat-laporan.mjs          skrip pembuat laporan (Node.js, tanpa pustaka luar)
+scripts/buat-laporan.mjs          pengambil data, pemindai kandidat, penyusun laporan
+scripts/grafik.mjs                pembuat grafik SVG (tanpa pustaka luar)
 .github/workflows/laporan-harian.yml   jadwal & langkah otomatisnya
 harian/                           hasil laporan
   ├── 2026-09-02-briefing.md      satu berkas per hari
-  └── terbaru.md                  salinan hari terakhir
+  ├── terbaru.md                  salinan hari terakhir
+  ├── terbaru.html                versi berdiri sendiri untuk dibaca di HP
+  └── aset/                       grafik SVG, diberi awalan tanggal
 ```
 
 ## Sumber data
 
-| Sumber | Dipakai untuk | Biaya |
-|---|---|---|
-| CoinGecko | Harga 15 koin teratas, kapitalisasi pasar, dominasi BTC | Gratis |
-| Alternative.me | Indeks Fear & Greed hari ini vs kemarin | Gratis |
-| Cointelegraph (RSS) | Berita crypto 24 jam terakhir | Gratis |
-| BBC World (RSS) | Berita dunia 24 jam terakhir | Gratis |
-| Google Gemini | Menyusun semuanya jadi laporan Bahasa Indonesia | Kuota gratis |
+Semuanya gratis dan tanpa API key, kecuali Gemini yang memakai kuota gratis.
+
+| Sumber | Dipakai untuk |
+|---|---|
+| CoinGecko `/coins/markets` | Harga + perubahan 1 jam/24 jam/7 hari/30 hari untuk 100 koin teratas |
+| CoinGecko `/coins/categories` | Performa per sektor, untuk membaca rotasi modal |
+| CoinGecko `/search/trending` | Koin yang paling banyak dicari |
+| CoinGecko `/market_chart` | Deret harga Bitcoin 7 hari |
+| Alternative.me | Indeks Fear & Greed 30 hari |
+| Cointelegraph (RSS) | Berita crypto 24 jam |
+| BBC World (RSS) | Berita dunia 24 jam |
+| Reddit r/CryptoCurrency (RSS) | Percakapan ritel |
+| CryptoPanic (RSS) | Berita yang paling banyak direaksikan komunitas |
+| Google Gemini | Menyusun semuanya jadi laporan Bahasa Indonesia |
+
+**Catatan soal Twitter/X:** sejak Februari 2026 tidak ada lagi tier gratis; membaca
+tweet ditagih $0,005 per pos. Reddit dan CryptoPanic dipakai sebagai pengganti gratis
+untuk membaca arah percakapan.
+
+**Catatan soal CryptoBubbles:** yang ditiru adalah *model datanya* — satu koin dibaca
+pada beberapa rentang waktu sekaligus — memakai API resmi CoinGecko, bukan endpoint
+internal situsnya. Peta gelembungnya digambar sendiri di `scripts/grafik.mjs`.
+
+## Isi laporan
+
+| Bagian | Isi |
+|---|---|
+| Yang Paling Penting Hari Ini | Satu hal yang paling menentukan arah, beserta alasan pemilihannya |
+| Pasar Crypto | Tabel 8 koin teratas + kartu metrik + grafik perubahan 24 jam |
+| Sentimen Pasar | Fear & Greed 30 hari + tren Bitcoin sepekan |
+| Rotasi Sektor | Sektor terkuat dan terlemah, ke mana modal berpindah |
+| Berita & Kebijakan Penting | Berita berdampak, masing-masing dengan alasan kenapa penting |
+| Yang Sedang Ramai Dibicarakan | Perhatian ritel — ditandai jelas sebagai perhatian, bukan kualitas |
+| Kandidat untuk Diteliti | Koin dengan sinyal tak biasa + alasan mikro dan makro + peta gelembung |
+| Sisi Lain | Argumen yang melawan pembacaan utama |
+| Agenda & Batas Laporan | Peristiwa mendatang, dan apa yang laporan ini tidak bisa jawab |
+
+Cara berpikirnya mengikuti skill `analis-aset` di `D:\Ai Agent\skill\`: jantung dulu baru
+aliran darah, fakta dipisahkan dari interpretasi dan spekulasi, tidak pernah mengarang
+angka, dan wajib ada sisi lain. Kandidat yang muncul di sini **baru sinyal mentah** —
+pembedahannya memakai `references/berburu-kandidat.md` lalu `framework-crypto.md`.
 
 ## Yang perlu disiapkan sekali saja
 
