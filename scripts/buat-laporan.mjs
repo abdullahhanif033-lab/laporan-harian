@@ -12,7 +12,15 @@ import { fileURLToPath } from 'node:url';
 
 const AKAR = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FOLDER_LAPORAN = join(AKAR, 'harian');
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+// Daftar model yang dicoba berurutan. Kalau Google menghentikan salah satunya,
+// skrip otomatis pindah ke berikutnya — termasuk ke model pengganti yang
+// disebut Google sendiri di pesan errornya.
+const MODEL_PILIHAN = [
+  process.env.GEMINI_MODEL,
+  'gemini-3.6-flash',
+  'gemini-flash-latest',
+  'gemini-2.5-flash'
+].filter(Boolean);
 
 /* ---------------------------------------------------------------- utilitas */
 
@@ -193,8 +201,8 @@ data.beritaDunia
 
 /* ------------------------------------------------------------------ gemini */
 
-async function tanyaGemini(prompt, kunci) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
+async function panggilGemini(model, prompt, kunci) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-goog-api-key': kunci },
@@ -204,15 +212,51 @@ async function tanyaGemini(prompt, kunci) {
     })
   });
 
+  const badan = await res.text();
   if (!res.ok) {
-    throw new Error(`Gemini menolak (HTTP ${res.status}): ${(await res.text()).slice(0, 300)}`);
+    const galat = new Error(`HTTP ${res.status}: ${badan.slice(0, 300)}`);
+    galat.status = res.status;
+    // Google biasanya menyebut model penggantinya di pesan error.
+    const usul = badan.match(/models\/([a-z0-9.\-]+)\s+for the latest/i);
+    galat.modelUsulan = usul ? usul[1] : null;
+    throw galat;
   }
 
-  const data = await res.json();
+  const data = JSON.parse(badan);
   const bagian = data?.candidates?.[0]?.content?.parts;
   const teks = Array.isArray(bagian) ? bagian.map(p => p.text || '').join('') : '';
   if (!teks.trim()) throw new Error('Gemini mengembalikan jawaban kosong');
   return teks;
+}
+
+async function tanyaGemini(prompt, kunci) {
+  const dicoba = [];
+  const antrean = [...MODEL_PILIHAN];
+
+  while (antrean.length) {
+    const model = antrean.shift();
+    if (dicoba.includes(model)) continue;
+    dicoba.push(model);
+
+    try {
+      console.log(`  mencoba model ${model}...`);
+      const teks = await panggilGemini(model, prompt, kunci);
+      console.log(`  [ok] model ${model} dipakai`);
+      return teks;
+    } catch (e) {
+      console.log(`  [gagal] ${model} — ${e.message.slice(0, 120)}`);
+      if (e.status === 404 && e.modelUsulan && !dicoba.includes(e.modelUsulan)) {
+        console.log(`  Google menyarankan ${e.modelUsulan}, dicoba berikutnya.`);
+        antrean.unshift(e.modelUsulan);
+      }
+      // Kunci salah atau kuota habis: tidak ada gunanya coba model lain.
+      if (e.status === 400 || e.status === 401 || e.status === 403 || e.status === 429) {
+        throw new Error(`Gemini menolak (${e.message.slice(0, 200)})`);
+      }
+    }
+  }
+
+  throw new Error(`Semua model gagal dicoba: ${dicoba.join(', ')}`);
 }
 
 /* -------------------------------------------------------------------- main */
@@ -230,7 +274,7 @@ async function utama() {
   console.log('Mengambil data...');
   const data = await ambilSemua();
 
-  console.log(`Meminta Gemini (${MODEL}) menulis laporan...`);
+  console.log('Meminta Gemini menulis laporan...');
   let isi = (await tanyaGemini(susunPrompt(data, waktu), kunci)).trim();
   isi = isi.replace(/^```(markdown|md)?\s*/i, '').replace(/```\s*$/, '').trim();
 
