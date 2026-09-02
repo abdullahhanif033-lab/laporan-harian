@@ -1,31 +1,41 @@
-<!-- Dibuat otomatis oleh GitHub Actions pada 2026-09-02 10:13 WIB -->
+<!-- Dibuat otomatis oleh GitHub Actions pada 2026-09-02 10:16 WIB -->
 
 # Briefing Harian — 2 September 2026
 
-Disusun otomatis 10:13 WIB | Sumber: CoinGecko, Alternative.me, Cointelegraph, BBC World
+Disusun otomatis 10:16 WIB | Sumber: CoinGecko, Alternative.me, Cointelegraph, BBC World
 
 ## Ringkasan Pagi Ini
-Pasar kripto dibuka dalam zona merah pagi ini dengan total kapitalisasi pasar tergerus 3.76% menjadi $2.63 triliun dalam 24 jam terakhir. Pelemahan aset digital terjadi berbarengan dengan gejolak di pasar keuangan makro, di mana lonjakan imbal hasil obligasi global menahan pergerakan Bitcoin di kisaran $77.000 hingga $78.000. Meskipun harga cenderung terkoreksi, perkembangan infrastruktur dan keterlibatan lembaga keuangan tradisional terus menunjukkan tren adopsi yang solid. Sentimen pasar secara umum masih bertahan di area keserakahan (Greed), meski memperlihatkan indikasi pendinginan dibanding hari sebelumnya.
+Pasar kripto bergerak melemah pagi ini dengan total kapitalisasi pasar global terdepresiasi sebesar 3,67% menjadi $2,63 triliun. Pergerakan Bitcoin cenderung tertahan di kisaran $77.450 seiring berlanjutnya tekanan dari pasar obligasi global, di mana imbal hasil obligasi pemerintah Jepang (JGB) tenor 10 tahun menyentuh rekor tertinggi dalam 30 tahun. Meskipun beberapa aset teratas mengalami koreksi tajam, sentimen pasar secara keseluruhan masih berada di zona *Greed*. Di sisi lain, adopsi institusional terus berjalan kuat ditandai dengan aksi perbankan besar yang menyiapkan *stablecoin* serta dorongan regulasi baru dari SEC.
 
 ## Pasar Crypto
 
 | Aset | Harga | 24 Jam | Kapitalisasi Pasar |
 | --- | --- | --- | --- |
-| BTC (Bitcoin) | $77504 | -1.21% | $1.56 triliun |
-| ETH (Ethereum) | $2416.52 | -1.99% | $291.5 miliar |
-| USDT (Tether) | $0.999562 | -0.02% | $183.3 miliar |
-| BNB (BNB) | $687.88 | -0.68% | $91.6 miliar |
-| XRP (XRP) | $1.35 | -1.74% | $84.8 miliar |
-| USDC (USDC) | $0.99974 | -0.01% | $73.6 miliar |
-| SOL (Solana) | $100.26 | -3.00% | $58.7 miliar |
-| TRX (TRON) | $0.321906 | -3.08% | $30.6 miliar |
+| BTC (Bitcoin) | $77450 | -1.24% | $1.55 triliun |
+| ETH (Ethereum) | $2413.44 | -2.09% | $291.2 miliar |
+| USDT (Tether) | $0.999587 | -0.01% | $183.3 miliar |
+| BNB (BNB) | $687.54 | -0.70% | $91.5 miliar |
+| XRP (XRP) | $1.35 | -2.00% | $84.7 miliar |
+| USDC (USDC) | $0.999771 | -0.01% | $73.6 miliar |
+| SOL (Solana) | $100.32 | -2.96% | $58.7 miliar |
+| TRX (TRON) | $0.32186 | -3.08% | $30.6 miliar |
 
-Di antara delapan koin berkapitalisasi terbesar, penurunan ter tajam dialami oleh TRON (TRX) sebesar -3.08% dan Solana (SOL) sebesar -3.00%. Sementara itu, Bitcoin (BTC) dan Ethereum (ETH) mengalami penurunan yang lebih terbatas masing-masing sebesar -1.21% dan -1.99%. Pergerakan dua koin stabil utama, USDT dan USDC, tercatat relatif datar.
+Hampir seluruh aset kripto utama mencatatkan koreksi dalam 24 jam terakhir. Di antara delapan aset berkapitalisasi pasar terbesar, TRON (TRX) dan Solana (SOL) mencatatkan penurunan paling tajam, masing-masing terperosok sebesar 3,08% dan 2,96%. Sementara itu, koreksi harga Bitcoin (BTC) sebesar 1,24% relatif lebih terbatas, menjaga tingkat dominasi BTC tetap dominan di angka 59,1%, sedangkan dominasi Ethereum (ETH) berada di tingkat 11,1%.
 
-Dominasi Bitcoin saat ini berada di level 59.1%, sedangkan dominasi Ethereum mencatatkan angka 11.1%. Porsi dominasi BTC yang tinggi mengindikasikan bahwa sebagian besar kapitalisasi pasar masih terkonsentrasi pada aset utama ini di tengah penurunan tajam pada altcoin.
-
-Indeks Fear & Greed hari ini mencatatkan angka 63 (Greed), turun dari angka 69 (Greed) pada hari sebelumnya. Penurunan ini menunjukkan bahwa kewaspadaan pelaku pasar mulai meningkat seiring koreksi harga, walaupun psikologi pasar secara keseluruhan belum sepenuhnya bergeser ke zona netral atau ketakutan.
+Indeks *Fear & Greed* hari ini tercatat pada angka 63 (Greed), mengalami penurunan dari posisi kemarin yang berada di level 69 (Greed). Penurunan angka ini menunjukkan adanya sedikit pendinginan optimisme di kalangan pelaku pasar menyusul koreksi harga aset secara menyeluruh, meski pasar secara umum masih didominasi sentimen positif.
 
 ## Berita & Kebijakan Penting
-* **Konsorsium Perbankan Raksasa (BofA, Citi, Goldman Sachs) Rencanakan Peluncuran Stablecoin**: Sebanyak 21 lembaga keuangan terkemuka bersiap meluncurkan proyek stablecoin berpatokan Dolar AS sebelum merambah ke mata uang G7 lainnya. *Mengapa ini penting*: Masuknya institusi keuangan terbesar dunia akan meningkatkan persaingan di industri stablecoin dan mempercepat jembatan antara TradFi dan aset digital.
-* **SEC Usulkan Pembaruan Aturan Transfer Agent Berbasis Blockchain**: Komisi Pasar Modal AS (SEC) mengajukan pembaruan aturan
+* **21 Lembaga Keuangan Besar Siapkan Stablecoin**: Konsorsium perbankan termasuk Bank of America, Citi, dan Goldman Sachs merencanakan peluncuran *stablecoin* berbasis Dolar AS dan mata uang G7. *Hal ini penting karena menandai masuknya raksasa TradFi secara langsung ke dalam infrastruktur pembayaran aset digital.*
+* **Binance Luncurkan Opsi Saham dan ETF AS**: Platform Binance membuka akses perdagangan opsi *physically settled* untuk lebih dari 1.000 saham dan ETF AS bagi pengguna non-AS. *Langkah ini memperluas akses produk keuangan campuran antara pasar modal tradisional dan platform kripto.*
+* **SEC Usulkan Pembaruan Aturan Agen Transfer**: SEC mengajukan modernisasi aturan agen transfer guna mengakomodasi pencatatan berbasis blockchain serta sekuritas tertokenisasi. *Penting karena memberikan kepastian regulasi bagi integrasi teknologi blockchain dalam infrastruktur pasar modal.*
+* **Tekanan Obligasi Global Tahan Harga Bitcoin**: Imbal hasil obligasi Jepang tenor 10 tahun menyentuh level tertinggi dalam 30 tahun di tengah *bear market* obligasi global, menjaga harga BTC tertahan di area $77.000 - $78.000. *Ini penting karena tingginya imbal hasil obligasi menyerap likuiditas pasar dan menahan pergerakan aset berisiko.*
+* **Kalshi Terbitkan Larangan Seumur Hidup**: Platform prediksi Kalshi memblokir permanen politisi George Santos terkait dugaan taruhan menggunakan informasi dalam (*insider betting*). *Langkah ini penting untuk menegakkan transparansi dan integritas pada industri pasar prediksi yang sedang berkembang.*
+
+## Agenda yang Perlu Diperhatikan
+* Peluncuran *stablecoin* Dolar AS oleh konsorsium 21 lembaga keuangan global (perkiraan).
+* Perkembaangan aturan agen transfer SEC terkait pencatatan berbasis blockchain (perkiraan).
+* Pergerakan lanjutan imbal hasil obligasi global yang berpotensi memengaruhi aliran likuiditas pasar kripto (perkiraan).
+* Rencana ekspansi *stablecoin* berdenominasi Euro oleh konsorsium perbankan TradFi (perkiraan).
+
+## Catatan Hari Ini
+Pasar saat ini sedang mengalami jeda dan bergerak dalam tekanan akibat kondisi makroekonomi, khususnya lonjakan imbal hasil obligasi global. Meskipun fondasi industri menguat lewat keterlibatan institusi finansial besar dan kejelasan regulasi, pergerakan harga jangka pendek masih rawan koreksi. Tetap cermati pergerakan makro dan jaga kehati-hatian dalam mengelola risiko portofolio.
