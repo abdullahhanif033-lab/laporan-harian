@@ -4,42 +4,42 @@
 <line x1="396" y1="50" x2="396" y2="364" stroke="#e3e6ea" stroke-width="1.5"/>
 <text x="30" y="72" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Robinhood Chain Meme</text>
 <rect x="396.0" y="61" width="190.0" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="594" y="73" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +11,80%</text>
-<text x="816" y="73" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$612,0 jt</text>
+<text x="594" y="73" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +11,29%</text>
+<text x="816" y="73" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$607,2 jt</text>
 <text x="30" y="102" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Index Coop Defi Index</text>
-<rect x="396.0" y="91" width="182.8" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="586.7621122531397" y="103" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +11,35%</text>
-<text x="816" y="103" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$6,8 mlr</text>
+<rect x="396.0" y="91" width="184.8" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="588.7718646706556" y="103" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +10,98%</text>
+<text x="816" y="103" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$6,7 mlr</text>
 <text x="30" y="132" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Yield Farming</text>
-<rect x="396.0" y="121" width="134.7" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="538.6670026951957" y="133" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +8,36%</text>
+<rect x="396.0" y="121" width="137.0" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="540.9891802288557" y="133" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +8,14%</text>
 <text x="816" y="133" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$10,3 mlr</text>
 <text x="30" y="162" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Storage</text>
-<rect x="396.0" y="151" width="120.6" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="524.6474840401539" y="163" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +7,49%</text>
+<rect x="396.0" y="151" width="125.4" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="529.4160219975554" y="163" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +7,45%</text>
 <text x="816" y="163" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$1,5 mlr</text>
 <text x="30" y="192" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Automated Market Make…</text>
-<rect x="396.0" y="181" width="105.7" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="509.7180930856524" y="193" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +6,56%</text>
-<text x="816" y="193" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$8,5 mlr</text>
+<rect x="396.0" y="181" width="103.0" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="507.01009622059837" y="193" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +6,12%</text>
+<text x="816" y="193" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$8,4 mlr</text>
 <text x="30" y="222" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Curve Ecosystem</text>
-<rect x="396.0" y="211" width="89.3" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="493.3427221815053" y="223" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +5,55%</text>
-<text x="816" y="223" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$882,6 jt</text>
-<text x="30" y="252" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Bittensor Subnets</text>
-<rect x="317.7" y="241" width="78.3" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="309.73572633132187" y="253" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -4,86%</text>
-<text x="816" y="253" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$995,3 jt</text>
+<rect x="396.0" y="211" width="96.6" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="500.57351836252116" y="223" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +5,74%</text>
+<text x="816" y="223" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$884,1 jt</text>
+<text x="30" y="252" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">AI Meme</text>
+<rect x="306.5" y="241" width="89.5" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="298.52402430440907" y="253" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -5,32%</text>
+<text x="816" y="253" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$788,7 jt</text>
 <text x="30" y="282" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Bridged-Tokens</text>
-<rect x="316.5" y="271" width="79.5" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="308.52256517232195" y="283" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -4,93%</text>
-<text x="816" y="283" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$615,2 jt</text>
+<rect x="306.3" y="271" width="89.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="298.28052353983514" y="283" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -5,33%</text>
+<text x="816" y="283" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$615,6 jt</text>
 <text x="30" y="312" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Privacy Blockchain</text>
-<rect x="312.0" y="301" width="84.0" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="304.00711033526045" y="313" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -5,21%</text>
+<rect x="306.2" y="301" width="89.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="298.1616828698819" y="313" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -5,34%</text>
 <text x="816" y="313" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$6,7 mlr</text>
 <text x="30" y="342" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Pump.fun Ecosystem</text>
-<rect x="279.4" y="331" width="116.6" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="271.3660117902365" y="343" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -7,24%</text>
+<rect x="270.7" y="331" width="125.3" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="262.7472932474315" y="343" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -7,44%</text>
 <text x="816" y="343" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$1,5 mlr</text>
 </svg>

@@ -10,7 +10,7 @@
 <text x="405.31868131868134" y="227" font-size="14" fill="#0b0b0b" font-weight="700" text-anchor="middle">BTC</text>
 <text x="405.31868131868134" y="242" font-size="12" fill="#D03B3B" font-weight="650" text-anchor="middle">-2,0%</text>
 <circle cx="410.5" cy="297.6" r="25.1" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
-<text x="410.4649840893447" y="295.5807336665239" font-size="9.660073301338764" fill="#0b0b0b" font-weight="700" text-anchor="middle">ETH</text>
+<text x="410.4649840893447" y="295.5807336665239" font-size="9.659953949334882" fill="#0b0b0b" font-weight="700" text-anchor="middle">ETH</text>
 <text x="410.4649840893447" y="310.5807336665239" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-2,1%</text>
 <circle cx="405.7" cy="165.2" r="19.8" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
 <text x="405.72495055864357" y="163.24889546492147" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">BNB</text>
