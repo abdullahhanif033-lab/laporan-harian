@@ -78,11 +78,44 @@ function daftarBerita(butir, kosong) {
   return butir.map((b, i) => `${i + 1}. ${b.judul}${b.isi ? ' — ' + b.isi : ''}`).join('\n');
 }
 
+// Beberapa penerbit memblokir IP pusat data, jadi satu sumber saja rapuh:
+// yang lolos dari laptop belum tentu lolos dari server GitHub. Karena itu
+// setiap kategori punya daftar cadangan, dan yang pertama berhasil dipakai.
+async function rssPertamaYangHidup(daftar, batas) {
+  const gagal = [];
+  for (const { nama, url } of daftar) {
+    try {
+      const xml = await ambil(url, { sebagai: 'teks', timeoutMs: 20000 });
+      const butir = bacaRss(xml, batas);
+      if (butir.length) return { nama, butir, gagal };
+      gagal.push(`${nama}: kosong`);
+    } catch (e) {
+      gagal.push(`${nama}: ${e.message}`);
+    }
+  }
+  return { nama: null, butir: [], gagal };
+}
+
+async function jsonPertamaYangHidup(daftar) {
+  const gagal = [];
+  for (const { nama, url, baca } of daftar) {
+    try {
+      const hasil = baca(await ambil(url, { timeoutMs: 20000 }));
+      if (hasil != null) return { nama, hasil, gagal };
+      gagal.push(`${nama}: kosong`);
+    } catch (e) {
+      gagal.push(`${nama}: ${e.message}`);
+    }
+  }
+  return { nama: null, hasil: null, gagal };
+}
+
 /* ----------------------------------------------------- pengambilan sumber */
 
 async function ambilSemua() {
   const mentah = {};
   const teks = {};
+  const sumberTerpakai = {};
 
   const tugas = [
     ['koin', async () => {
@@ -191,29 +224,70 @@ async function ambilSemua() {
     }],
 
     ['beritaCrypto', async () => {
-      const xml = await ambil('https://cointelegraph.com/rss', { sebagai: 'teks' });
-      teks.beritaCrypto = daftarBerita(bacaRss(xml, 12), 'Tidak ada berita crypto terambil.');
+      const r = await rssPertamaYangHidup([
+        { nama: 'Cointelegraph', url: 'https://cointelegraph.com/rss' },
+        { nama: 'Decrypt', url: 'https://decrypt.co/feed' },
+        { nama: 'The Block', url: 'https://www.theblock.co/rss.xml' }
+      ], 12);
+      sumberTerpakai.beritaCrypto = r.nama;
+      if (r.gagal.length) console.log(`    (crypto dilewati: ${r.gagal.join('; ')})`);
+      teks.beritaCrypto = daftarBerita(r.butir, 'Tidak ada berita crypto terambil.');
     }],
 
     ['beritaDunia', async () => {
-      const xml = await ambil('https://feeds.bbci.co.uk/news/world/rss.xml', { sebagai: 'teks' });
-      teks.beritaDunia = daftarBerita(bacaRss(xml, 10), 'Tidak ada berita dunia terambil.');
+      const r = await rssPertamaYangHidup([
+        { nama: 'BBC World', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+        { nama: 'Al Jazeera', url: 'https://www.aljazeera.com/xml/rss/all.xml' },
+        { nama: 'WSJ World', url: 'https://feeds.a.dj.com/rss/RSSWorldNews.xml' }
+      ], 10);
+      sumberTerpakai.beritaDunia = r.nama;
+      if (r.gagal.length) console.log(`    (dunia dilewati: ${r.gagal.join('; ')})`);
+      teks.beritaDunia = daftarBerita(r.butir, 'Tidak ada berita dunia terambil.');
+    }],
+
+    ['kurs', async () => {
+      // Kurs rupiah penting karena semua angka di laporan ini berdenominasi dolar.
+      const r = await jsonPertamaYangHidup([
+        {
+          nama: 'Frankfurter',
+          url: 'https://api.frankfurter.dev/v1/latest?base=USD&symbols=IDR',
+          baca: d => d?.rates?.IDR ?? null
+        },
+        {
+          nama: 'ExchangeRate-API',
+          url: 'https://open.er-api.com/v6/latest/USD',
+          baca: d => d?.rates?.IDR ?? null
+        }
+      ]);
+      sumberTerpakai.kurs = r.nama;
+      teks.kurs = r.hasil
+        ? `1 USD = Rp${angka(r.hasil, 0)} (${r.nama})`
+        : 'DATA KURS TIDAK TERSEDIA';
     }],
 
     ['percakapan', async () => {
       // Pengganti gratis untuk "apa yang sedang ramai dibicarakan".
       // Reddit memblokir endpoint JSON dari IP pusat data, tapi RSS-nya lolos.
-      const xml = await ambil('https://www.reddit.com/r/CryptoCurrency/hot/.rss?limit=15', { sebagai: 'teks' });
-      const butir = bacaRss(xml, 12).filter(b => !/^Daily (Discussion|General)/i.test(b.judul));
+      const r = await rssPertamaYangHidup([
+        { nama: 'r/CryptoCurrency', url: 'https://www.reddit.com/r/CryptoCurrency/hot/.rss?limit=15' },
+        { nama: 'r/CryptoMarkets', url: 'https://www.reddit.com/r/CryptoMarkets/hot/.rss?limit=15' }
+      ], 14);
+      sumberTerpakai.percakapan = r.nama;
+      const butir = r.butir.filter(b => !/^Daily (Discussion|General)/i.test(b.judul));
       teks.percakapan = butir.length
         ? butir.slice(0, 10).map((b, i) => `${i + 1}. ${b.judul}`).join('\n')
         : 'Tidak ada percakapan terambil.';
     }],
 
     ['sorotan', async () => {
-      // CryptoPanic mengumpulkan berita yang paling banyak direaksikan komunitas.
-      const xml = await ambil('https://cryptopanic.com/news/rss/', { sebagai: 'teks' });
-      teks.sorotan = daftarBerita(bacaRss(xml, 12), 'Tidak ada sorotan terambil.');
+      // Berita yang paling banyak direaksikan komunitas.
+      const r = await rssPertamaYangHidup([
+        { nama: 'CryptoPanic', url: 'https://cryptopanic.com/news/rss/' },
+        { nama: 'The Block', url: 'https://www.theblock.co/rss.xml' },
+        { nama: 'Decrypt', url: 'https://decrypt.co/feed' }
+      ], 12);
+      sumberTerpakai.sorotan = r.nama;
+      teks.sorotan = daftarBerita(r.butir, 'Tidak ada sorotan terambil.');
     }]
   ];
 
@@ -229,7 +303,13 @@ async function ambilSemua() {
     }
   }));
 
-  return { mentah, teks };
+  const dipakai = Object.entries(sumberTerpakai)
+    .filter(([, v]) => v)
+    .map(([k, v]) => `${k}=${v}`)
+    .join(', ');
+  if (dipakai) console.log(`  sumber terpakai: ${dipakai}`);
+
+  return { mentah, teks, sumberTerpakai };
 }
 
 /* --------------------------------------------------------------- grafik */
@@ -358,8 +438,10 @@ pembacaan yang jujur, dan argumen lawannya.
 CARA BERPIKIR (wajib diikuti):
 1. Jantung dulu. Tentukan SATU hal yang paling menentukan arah pasar hari ini, lalu jadikan
    itu tulang punggung laporan. Jangan menyusun daftar angka tanpa urutan kepentingan.
-2. Pisahkan tiga lapis secara eksplisit: FAKTA (angka + sumbernya) → INTERPRETASI (artinya)
-   → SPEKULASI (skenario; wajib ditandai dengan kata "spekulasi" atau "kalau ... maka ...").
+2. Pisahkan tiga lapis — fakta, lalu artinya, lalu skenario — tapi **lewat cara menulis, bukan
+   lewat label**. Sebut angka dan sumbernya dulu, baru maknanya, dan tandai setiap dugaan dengan
+   bentuk "kalau ... maka ...". JANGAN menulis kata FAKTA, INTERPRETASI, atau SPEKULASI sebagai
+   penanda di awal paragraf — laporan harus mengalir seperti tulisan analis, bukan formulir.
 3. Jangan pernah mengarang angka. Yang tidak ada di DATA ditulis "tidak tersedia".
    Analisis dengan 5 angka nyata lebih berguna daripada 12 angka yang separuhnya ditebak.
 4. Wajib ada sisi lain. Tulis argumen yang melawan pembacaan utamamu seserius pembacaan
@@ -372,7 +454,7 @@ STRUKTUR (pakai judul persis seperti ini):
 
 # Briefing Harian — ${waktu.tanggalPanjang}
 
-Disusun otomatis ${waktu.jam} WIB | Sumber: CoinGecko, Alternative.me, Cointelegraph, BBC World, Reddit, CryptoPanic
+Disusun otomatis ${waktu.jam} WIB | ${teks.kurs ?? 'kurs tidak tersedia'}
 
 ## Yang Paling Penting Hari Ini
 (Judul-sebagai-temuan tidak dipakai di sini; langsung 3-5 kalimat. Sebut satu hal yang paling
@@ -422,11 +504,20 @@ tenggat regulasi. Tandai "(perkiraan)" kalau tanggalnya tidak dipastikan oleh DA
 
 ## Catatan & Batas Laporan Ini
 (2-3 kalimat: data apa yang tidak tersedia hari ini, dan apa yang laporan ini TIDAK bisa jawab.
+Sebut juga bahwa laporan ini tidak memuat jadwal pembukaan kunci token dan data pendanaan
+proyek, karena sumber gratisnya sudah tidak tersedia — keduanya perlu ditelusuri manual.
 Tutup dengan: "Laporan ini menyajikan situasi, bukan nasihat investasi.")
 
 ATURAN PENULISAN:
 - Bahasa Indonesia yang mengalir, langsung ke inti, bukan terjemahan kaku.
-- Satuan uang disalin apa adanya dari DATA (T = triliun, M = miliar, jt = juta).
+- Satuan uang disalin apa adanya dari DATA (triliun, miliar, juta).
+- **Jangan mengarang kata.** Pakai istilah baku: tokenized securities = "sekuritas tertokenisasi",
+  yield = "imbal hasil", unlock = "pembukaan kunci token", market cap = "kapitalisasi pasar",
+  bridging = "penjembatanan", staking = "staking", listing = "pencatatan". Kalau kamu tidak yakin
+  padanan Indonesianya, tulis istilah Inggrisnya apa adanya dalam huruf miring — jangan pernah
+  membuat kata baru yang mirip-mirip bunyinya.
+- Baca ulang tiap kalimat sebelum mengeluarkannya. Kalimat yang tidak bisa dipahami pembaca
+  Indonesia biasa harus ditulis ulang, bukan dibiarkan.
 - Keluarkan HANYA isi markdown laporannya. Tanpa pembuka, tanpa penutup, tanpa pagar kode.
 - Jangan menyisipkan gambar atau tautan gambar; grafik ditambahkan otomatis setelah kamu selesai.
 
@@ -437,6 +528,9 @@ ${teks.harga ?? 'tidak tersedia'}
 
 [PASAR GLOBAL CRYPTO — CoinGecko]
 ${teks.global ?? 'tidak tersedia'}
+
+[KURS RUPIAH HARI INI]
+${teks.kurs ?? 'tidak tersedia'}
 
 [PERGERAKAN MULTI-WAKTU — CoinGecko, 100 koin teratas dipindai]
 ${teks.gerakan ?? 'tidak tersedia'}
