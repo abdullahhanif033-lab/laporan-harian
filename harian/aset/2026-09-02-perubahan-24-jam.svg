@@ -3,43 +3,43 @@
 <text x="30" y="30" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Perubahan 24 jam — koin utama (stablecoin dikecualikan)</text>
 <line x1="396" y1="50" x2="396" y2="364" stroke="#e3e6ea" stroke-width="1.5"/>
 <text x="30" y="72" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">BTC</text>
-<rect x="334.7" y="61" width="61.3" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="326.66458" y="73" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -1,61%</text>
+<rect x="332.1" y="61" width="63.9" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="324.07146" y="73" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -1,68%</text>
 <text x="816" y="73" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$1,56 trl</text>
 <text x="30" y="102" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">ETH</text>
-<rect x="312.3" y="91" width="83.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="304.29702" y="103" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,20%</text>
-<text x="816" y="103" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$292,2 mlr</text>
+<rect x="309.4" y="91" width="86.6" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="301.36342" y="103" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,28%</text>
+<text x="816" y="103" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$292,0 mlr</text>
 <text x="30" y="132" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">BNB</text>
-<rect x="376.2" y="121" width="19.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="368.22784" y="133" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -0,52%</text>
-<text x="816" y="133" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$91,8 mlr</text>
+<rect x="374.6" y="121" width="21.4" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="366.587" y="133" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -0,56%</text>
+<text x="816" y="133" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$91,7 mlr</text>
 <text x="30" y="162" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">XRP</text>
-<rect x="302.4" y="151" width="93.6" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="294.38396" y="163" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,46%</text>
-<text x="816" y="163" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$84,9 mlr</text>
+<rect x="300.0" y="151" width="96.0" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="291.96906" y="163" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,53%</text>
+<text x="816" y="163" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$84,8 mlr</text>
 <text x="30" y="192" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">SOL</text>
-<rect x="260.2" y="181" width="135.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="252.23816" y="193" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -3,57%</text>
-<text x="816" y="193" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$58,7 mlr</text>
+<rect x="256.2" y="181" width="139.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="248.2455" y="193" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -3,68%</text>
+<text x="816" y="193" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$58,6 mlr</text>
 <text x="30" y="222" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">TRX</text>
-<rect x="291.2" y="211" width="104.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="283.22944" y="223" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,76%</text>
+<rect x="291.3" y="211" width="104.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="283.27998" y="223" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,76%</text>
 <text x="816" y="223" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$30,6 mlr</text>
 <text x="30" y="252" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">FIGR_HELOC</text>
 <rect x="396.0" y="241" width="166.2" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
-<text x="570.2481" y="253" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +4,37%</text>
+<text x="570.2405" y="253" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +4,37%</text>
 <text x="816" y="253" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$23,0 mlr</text>
 <text x="30" y="282" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">HYPE</text>
-<rect x="365.8" y="271" width="30.2" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="357.76454" y="283" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -0,80%</text>
+<rect x="364.3" y="271" width="31.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="356.3308" y="283" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -0,83%</text>
 <text x="816" y="283" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$18,6 mlr</text>
 <text x="30" y="312" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">ZEC</text>
-<rect x="301.7" y="301" width="94.3" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="293.65246" y="313" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,48%</text>
+<rect x="299.6" y="301" width="96.4" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="291.64567999999997" y="313" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -2,54%</text>
 <text x="816" y="313" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$14,2 mlr</text>
 <text x="30" y="342" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">DOGE</text>
-<rect x="329.3" y="331" width="66.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
-<text x="321.26135999999997" y="343" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -1,76%</text>
+<rect x="325.3" y="331" width="70.7" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="317.34090000000003" y="343" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -1,86%</text>
 <text x="816" y="343" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$12,8 mlr</text>
 </svg>
