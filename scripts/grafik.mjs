@@ -37,11 +37,23 @@ export function angka(n, desimal = null) {
   }).format(n);
 }
 
+// Untuk grafik: pendek karena ruangnya sempit, tapi memakai singkatan Indonesia
+// yang tidak rancu (mlr = miliar, bukan "M" yang sering dibaca million).
 export function uangRingkas(n) {
   if (n == null || Number.isNaN(n)) return 'n/a';
-  if (n >= 1e12) return '$' + angka(n / 1e12, 2) + ' T';
-  if (n >= 1e9) return '$' + angka(n / 1e9, 1) + ' M';
+  if (n >= 1e12) return '$' + angka(n / 1e12, 2) + ' trl';
+  if (n >= 1e9) return '$' + angka(n / 1e9, 1) + ' mlr';
   if (n >= 1e6) return '$' + angka(n / 1e6, 1) + ' jt';
+  return '$' + angka(n);
+}
+
+// Untuk teks yang dibaca model dan disalin ke laporan: dieja penuh supaya
+// tidak ada satuan yang bisa disalahbaca pembacanya.
+export function uangPanjang(n) {
+  if (n == null || Number.isNaN(n)) return 'tidak tersedia';
+  if (n >= 1e12) return '$' + angka(n / 1e12, 2) + ' triliun';
+  if (n >= 1e9) return '$' + angka(n / 1e9, 1) + ' miliar';
+  if (n >= 1e6) return '$' + angka(n / 1e6, 1) + ' juta';
   return '$' + angka(n);
 }
 

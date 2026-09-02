@@ -1,4 +1,4 @@
-// =====================================================================
+﻿// =====================================================================
 //  Pembuat briefing harian — versi mandiri (tanpa n8n)
 //  Dijalankan GitHub Actions tiap 06.00 WIB, bisa juga dijalankan
 //  manual:  node scripts/buat-laporan.mjs
@@ -15,7 +15,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   kartuMetrik, grafikTren, grafikPerubahan, grafikSentimen, petaGelembung,
-  angka, uangRingkas, persen, WARNA
+  angka, uangRingkas, uangPanjang, persen, WARNA
 } from './grafik.mjs';
 
 const AKAR = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -97,8 +97,8 @@ async function ambilSemua() {
       teks.harga = d.slice(0, 15).map(c => {
         const ubah = c.price_change_percentage_24h == null ? 'tidak tersedia' : persen(c.price_change_percentage_24h);
         return `${String(c.symbol).toUpperCase()} (${c.name}): harga $${angka(c.current_price)}` +
-               ` | 24 jam: ${ubah} | kapitalisasi pasar: ${uangRingkas(c.market_cap)}` +
-               ` | volume 24 jam: ${uangRingkas(c.total_volume)}`;
+               ` | 24 jam: ${ubah} | kapitalisasi pasar: ${uangPanjang(c.market_cap)}` +
+               ` | volume 24 jam: ${uangPanjang(c.total_volume)}`;
       }).join('\n');
 
       const u = (c, k) => c[`price_change_percentage_${k}_in_currency`];
@@ -110,7 +110,7 @@ async function ambilSemua() {
       const garis = c =>
         `${String(c.symbol).toUpperCase()} (${c.name}): 1 jam ${persen(u(c, '1h'))} | 24 jam ${persen(u(c, '24h'))}` +
         ` | 7 hari ${persen(u(c, '7d'))} | 30 hari ${persen(u(c, '30d'))}` +
-        ` | kapitalisasi ${uangRingkas(c.market_cap)} | volume/kapitalisasi ${angka((c.total_volume / c.market_cap) * 100, 1)}%`;
+        ` | kapitalisasi ${uangPanjang(c.market_cap)} | volume/kapitalisasi ${angka((c.total_volume / c.market_cap) * 100, 1)}%`;
 
       teks.gerakan =
         'NAIK PALING TAJAM 7 HARI:\n' + naik7h.map(garis).join('\n') +
@@ -143,7 +143,7 @@ async function ambilSemua() {
       mentah.sektor = layak;
       const naik = [...layak].sort((a, b) => b.market_cap_change_24h - a.market_cap_change_24h).slice(0, 6);
       const turun = [...layak].sort((a, b) => a.market_cap_change_24h - b.market_cap_change_24h).slice(0, 4);
-      const garis = k => `${k.name}: ${persen(k.market_cap_change_24h)} dalam 24 jam | kapitalisasi sektor ${uangRingkas(k.market_cap)}`;
+      const garis = k => `${k.name}: ${persen(k.market_cap_change_24h)} dalam 24 jam | kapitalisasi sektor ${uangPanjang(k.market_cap)}`;
       teks.sektor =
         'SEKTOR PALING KUAT:\n' + naik.map(garis).join('\n') +
         '\n\nSEKTOR PALING LEMAH:\n' + turun.map(garis).join('\n');
@@ -153,9 +153,9 @@ async function ambilSemua() {
       const g = (await ambil('https://api.coingecko.com/api/v3/global')).data;
       mentah.global = g;
       teks.global =
-        `Total kapitalisasi pasar: ${uangRingkas(g.total_market_cap.usd)}` +
+        `Total kapitalisasi pasar: ${uangPanjang(g.total_market_cap.usd)}` +
         ` | Perubahan 24 jam: ${g.market_cap_change_percentage_24h_usd == null ? 'tidak tersedia' : persen(g.market_cap_change_percentage_24h_usd)}` +
-        ` | Volume 24 jam: ${uangRingkas(g.total_volume.usd)}` +
+        ` | Volume 24 jam: ${uangPanjang(g.total_volume.usd)}` +
         ` | Dominasi BTC: ${angka(g.market_cap_percentage.btc, 1)}%` +
         ` | Dominasi ETH: ${angka(g.market_cap_percentage.eth, 1)}%`;
     }],
