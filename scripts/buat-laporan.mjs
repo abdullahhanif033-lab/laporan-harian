@@ -773,10 +773,12 @@ th{background:var(--kd);font-weight:600;font-size:.82rem;text-transform:uppercas
 tbody tr:last-child td{border-bottom:none}
 strong{font-weight:650}
 .kaki{margin-top:3em;padding-top:1em;border-top:1px solid var(--gr);font-size:.8rem;color:var(--lb)}
+.kaki a{color:var(--lb)}
 </style></head><body><main>
 ${isiHtml}
 <div class="kaki">Disusun otomatis oleh GitHub Actions pada ${waktu.tanggal} ${waktu.jam} WIB.
-Laporan ini menyajikan situasi pasar, bukan nasihat investasi.</div>
+Laporan ini menyajikan situasi pasar, bukan nasihat investasi.<br>
+<a href="https://github.com/abdullahhanif033-lab/laporan-harian/tree/main/harian">Arsip laporan hari-hari sebelumnya</a></div>
 </main></body></html>`;
 }
 
@@ -807,9 +809,15 @@ async function utama() {
   const laporan = `${catatan}\n\n${isi}\n`;
 
   await mkdir(FOLDER_LAPORAN, { recursive: true });
+  const halaman = halamanHtml(markdownKeHtml(isi, grafik), waktu);
+
   await writeFile(join(FOLDER_LAPORAN, `${waktu.tanggal}-briefing.md`), laporan, 'utf8');
   await writeFile(join(FOLDER_LAPORAN, 'terbaru.md'), laporan, 'utf8');
-  await writeFile(join(FOLDER_LAPORAN, 'terbaru.html'), halamanHtml(markdownKeHtml(isi, grafik), waktu), 'utf8');
+  await writeFile(join(FOLDER_LAPORAN, 'terbaru.html'), halaman, 'utf8');
+
+  // index.html di akar repo disajikan GitHub Pages, sehingga laporan bergrafik
+  // bisa dibaca dari HP tanpa laptop menyala dan tanpa password.
+  await writeFile(join(AKAR, 'index.html'), halaman, 'utf8');
 
   console.log(`Selesai. ${laporan.length} karakter, ${Object.keys(grafik).length} grafik.`);
 }
