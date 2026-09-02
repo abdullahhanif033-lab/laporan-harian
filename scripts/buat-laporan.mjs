@@ -208,7 +208,9 @@ async function panggilGemini(model, prompt, kunci) {
     headers: { 'content-type': 'application/json', 'x-goog-api-key': kunci },
     body: JSON.stringify({
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.6, maxOutputTokens: 4096 }
+      // Model baru memakai sebagian jatah token untuk berpikir sebelum menjawab,
+      // jadi batasnya dibuat lapang supaya laporan tidak terpotong di tengah.
+      generationConfig: { temperature: 0.6, maxOutputTokens: 16384 }
     })
   });
 
@@ -223,9 +225,13 @@ async function panggilGemini(model, prompt, kunci) {
   }
 
   const data = JSON.parse(badan);
-  const bagian = data?.candidates?.[0]?.content?.parts;
+  const kandidat = data?.candidates?.[0];
+  const bagian = kandidat?.content?.parts;
   const teks = Array.isArray(bagian) ? bagian.map(p => p.text || '').join('') : '';
   if (!teks.trim()) throw new Error('Gemini mengembalikan jawaban kosong');
+  if (kandidat?.finishReason && kandidat.finishReason !== 'STOP') {
+    console.log(`  [peringatan] jawaban berhenti karena ${kandidat.finishReason} — laporan mungkin terpotong`);
+  }
   return teks;
 }
 
