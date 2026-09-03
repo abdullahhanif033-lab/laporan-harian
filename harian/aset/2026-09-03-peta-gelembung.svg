@@ -10,7 +10,7 @@
 <text x="402.2130177514793" y="227" font-size="14" fill="#0b0b0b" font-weight="700" text-anchor="middle">BTC</text>
 <text x="402.2130177514793" y="242" font-size="12" fill="#D03B3B" font-weight="650" text-anchor="middle">-1,8%</text>
 <circle cx="379.5" cy="295.0" r="25.1" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
-<text x="379.4852071005917" y="293" font-size="9.667294299582093" fill="#0b0b0b" font-weight="700" text-anchor="middle">ETH</text>
+<text x="379.4852071005917" y="293" font-size="9.667154415892792" fill="#0b0b0b" font-weight="700" text-anchor="middle">ETH</text>
 <text x="379.4852071005917" y="308" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-4,1%</text>
 <circle cx="390.8" cy="165.2" r="19.8" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
 <text x="390.81776543607384" y="163.24889546492147" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">BNB</text>
@@ -36,7 +36,7 @@
 <circle cx="357.3" cy="189.2" r="15.5" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
 <text x="357.3027218934911" y="187.16283142591584" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">DOGE</text>
 <text x="357.3027218934911" y="202.16283142591584" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-5,6%</text>
-<circle cx="347.8" cy="253.8" r="15.5" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<circle cx="347.8" cy="253.8" r="15.4" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
 <text x="347.8356343560448" y="251.84662832984202" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">RAIN</text>
 <text x="347.8356343560448" y="266.846628329842" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-4,3%</text>
 <circle cx="549.4" cy="229.0" r="15.2" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
