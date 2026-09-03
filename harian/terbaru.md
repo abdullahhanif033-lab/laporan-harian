@@ -1,11 +1,11 @@
-<!-- Dibuat otomatis oleh GitHub Actions pada 2026-09-03 07:31 WIB -->
+<!-- Dibuat otomatis oleh GitHub Actions pada 2026-09-03 07:33 WIB -->
 
 # Briefing Harian — 3 September 2026
 
-Disusun otomatis 07:31 WIB | 1 USD = Rp17.715 (Frankfurter)
+Disusun otomatis 07:33 WIB | 1 USD = Rp17.715 (Frankfurter)
 
 ## Yang Paling Penting Hari Ini
-Tekanan pada Bitcoin yang kembali tergelincir di bawah level $77.000 ($77.016, -0,27% dalam 24 jam) menjadi poros utama pergerakan pasar hari ini. Penurunan ini mempertegas koreksi -4,05% selama sepekan terakhir dari puncaknya di $80.268 — hitungan saya sendiri dari deret harga harian CoinGecko. Indikator permintaan *onchain* (*apparent demand*) Bitcoin kini berbalik negatif di tengah aksi jual pada pasar obligasi dan saham global, sementara dominasi Bitcoin masih bertahan tinggi di level 59,0% dari total kapitalisasi pasar $2,61 triliun. Pilihannya jatuh pada angka-angka ini karena ketika mesin utama pasar kehilangan daya dorong organik akibat faktor makro, penguatan terisolasi pada sektor alternatif berisiko rapuh jika tidak didukung aliran modal segar ke aset inti.
+Bitcoin tertekan ke level $77.025, turun -4,04% dalam tujuh hari terakhir dan menyentuh titik terendahnya sepekan ini — hitungan saya dari deret harga CoinGecko — di tengah indikator permintaan terwujud (*apparent demand*) yang kembali negatif. Penurunan ini menyeret total kapitalisasi pasar crypto global memerah -2,95% menjadi $2,61 triliun dalam 24 jam terakhir. Fenomena ini menjadi tulang punggung pergerakan hari ini karena stagnasi dan penyusutan arus kas pada Bitcoin sebagai aset acuan membendung reli pasar secara keseluruhan, meskipun terjadi retensi modal secara selektif pada ekosistem Layer-2 dan DeFi.
 
 ## Pasar Crypto
 
@@ -13,23 +13,22 @@ Tekanan pada Bitcoin yang kembali tergelincir di bawah level $77.000 ($77.016, -
 
 ![2026 09 03 perubahan 24 jam](aset/2026-09-03-perubahan-24-jam.svg)
 
-
 | Aset | Harga | 24 Jam | Kapitalisasi Pasar |
 | --- | --- | --- | --- |
-| BTC | $77.016 | -0,27% | $1,55 triliun |
-| ETH | $2.380 | -1,27% | $290,5 miliar |
+| BTC | $77.025 | -0,34% | $1,55 triliun |
+| ETH | $2.380 | -1,38% | $290,4 miliar |
 | USDT | $0,9997 | +0,01% | $183,3 miliar |
-| BNB | $687,28 | +0,64% | $91,5 miliar |
-| XRP | $1,35 | +0,03% | $84,4 miliar |
+| BNB | $687,28 | +0,55% | $91,5 miliar |
+| XRP | $1,35 | -0,09% | $84,4 miliar |
 | USDC | $0,9998 | +0,00% | $73,7 miliar |
-| SOL | $99,69 | -0,03% | $58,4 miliar |
-| TRX | $0,3246 | +0,80% | $30,8 miliar |
+| SOL | $99,70 | -0,17% | $58,4 miliar |
+| TRX | $0,3246 | +0,74% | $30,8 miliar |
 
-Di jajaran aset berkapitalisasi besar, pergerakan relatif sempit dengan Ethereum (ETH) memimpin penurunan di antara token teratas sebesar -1,27% ke $2.380, sedangkan TRON (TRX) menguat +0,80% dan BNB naik +0,64%. Tekanan lebih tajam terlihat pada aset di luar 8 teratas seperti Figure Heloc (FIGR_HELOC) yang merosot -3,13% dan Rain (RAIN) yang turun -2,62%. Pengecualian signifikan terjadi pada token infrastruktur seperti Arbitrum (ARB) yang melonjak +14,83% dalam 24 jam terakhir.
+Pergerakan terparah di jajaran kapitalisasi besar dialami oleh Figure Heloc (FIGR_HELOC) yang terkoreksi -3,13% ke $1,01 dan Zcash (ZEC) yang melemah -2,28% ke $811,52 dalam 24 jam terakhir. Di sisi lain, TRON (TRX) memimpin kenaikan di papan atas dengan menguat +0,74% ke $0,3246. Koreksi pada mayoritas aset utama mencerminkan kehati-hatian pelaku pasar saat obligasi dan pasar saham global juga mengalami penurunan.
 
-Dominasi Bitcoin yang berada di tingkat 59,0% dengan dominasi Ethereum sebesar 11,1% mengindikasikan bahwa likuiditas belum sepenuhnya mengalir ke *altcoin*. Gabungan kapitalisasi pasar *stablecoin* utama (USDT dan USDC) yang menembus $257 miliar menandakan sebagian besar porsi dana memilih bertahan di aset aman. Situasi dominasi tinggi ini menyulitkan terjadinya reli menyeluruh pada *altcoin*, sehingga penguatan harga cenderung terlokalisasi pada koin dengan narasi spesifik.
+Dominasi pasar Bitcoin saat ini berada di angka 59,0%, sedangkan Ethereum mencatatkan dominasi 11,1%. Tingginya dominasi Bitcoin yang mendekati 60% menunjukkan bahwa altcoin secara umum belum memiliki daya dorong independen yang cukup kuat untuk memulai rotasi modal berskala besar. Kalau dominasi BTC terus menanjak menembus 60%, maka altcoin berisiko mengalami tekanan likuiditas yang lebih dalam.
 
-Total volume perdagangan 24 jam tercatat sebesar $73,5 miliar di atas nilai kapitalisasi pasar $2,61 triliun. Angka ini mencerminkan rasio volume terhadap kapitalisasi pasar sebesar 2,82% — hitungan saya sendiri dari data pasar global di atas. Rendahnya partisipasi volume ini menunjukkan bahwa aktivitas pasar saat ini lebih didorong oleh penyesuaian posisi ketimbang pembeli agresif baru.
+Volume transaksi global 24 jam tercatat sebesar $73,5 miliar, dengan partisipasi terbesar berada pada stablecoin USDT ($47,1 miliar) dan Bitcoin ($26,4 miliar). Rasio volume terhadap kapitalisasi pasar Bitcoin berada di kisaran 1,7% — hitungan saya dari data kapitalisasi $1,55 triliun dan volume $26,4 miliar — yang mengindikasikan bahwa aktivitas perdagangan pasar secara umum cenderung tertahan dan didominasi oleh transaksi lindung nilai.
 
 ## Sentimen Pasar
 
@@ -37,51 +36,50 @@ Total volume perdagangan 24 jam tercatat sebesar $73,5 miliar di atas nilai kapi
 
 ![2026 09 03 bitcoin 7 hari](aset/2026-09-03-bitcoin-7-hari.svg)
 
-Indeks Fear & Greed berada di angka 65 (Greed) hari ini, sedikit naik dari posisi kemarin di 63 (Greed), namun melemah dibanding pekan lalu yang berada di level 71 (Greed). Sentimen pasar masih bertahan di area keserakahan sedang meskipun terjadi penurunan harga secara bertahap dalam skala mingguan.
+Indeks Fear & Greed hari ini mencatatkan angka 65 (Greed), naik tipis dari posisi kemarin sebesar 63 (Greed), namun turun dibandingkan sepekan lalu yang berada di level 71 (Greed).
 
-Terdapat ketidakselarasan antara indikator sentimen dan pergerakan harga. Dalam 7 hari terakhir, total kapitalisasi pasar global tergerus -2,95% dan harga Bitcoin turun dari $80.268 ke $77.020, tetapi angka sentimen justru merambat naik dari kemarin. Ketimpangan ini memberi sinyal rasa percaya diri yang berlebihan (*complacency*) dari pelaku pasar ritel. Kalau ketidakselarasan ini bertahan tanpa ada aksi beli baru yang menopang harga, maka pasar berisiko mengalami penurunan mendadak saat para pemegang aset berupaya mengamankan keuntungannya.
+Pergerakan indeks sentimen ini menunjukkan dinamika yang berlawanan (*divergence*) dengan harga Bitcoin yang justru melemah -4,04% dalam tujuh hari terakhir dari $80.268 ke $77.025. Ketika sentimen ritel tetap berada di zona serakah padahal harga aset acuan terus merosot, kondisi ini mengindikasikan adanya celah ekspektasi (*expectation gap*) yang rentan memicu pemicuan aksi jual kejutan (*flush-out*) kalau harga menembus level dukungan krusial.
 
-## Berita & Kebijakan Perting
-*   **Coinbase Meluncurkan Derivatif Kripto Teratur di Kanada**: Coinbase resmi menawarkan *perpetual futures* dan *dated futures* dengan daya ungkit hingga 10x bagi pedagang Kanada yang memenuhi syarat.
-    *   Kenapa penting: Langkah ini memperluas jangkauan instrumen derivatif berlisensi di luar yurisdiksi Amerika Serikat dan memperkuat likuiditas institusional di kawasan Amerika Utara.
-*   **Wyoming Mengintegrasikan Verifikasi Cadangan Chainlink**: Negara bagian Wyoming menggunakan orakel Chainlink untuk menghadirkan verifikasi cadangan secara *near-real-time* pada rantai blok untuk token stabil terbitannya (FRNT).
-    *   Kenapa penting: Penggunaan teknologi orakel oleh lembaga pemerintah menetapkan standar baru transparansi token stabil yang dapat mendorong adopsi institusional lebih luas.
-*   **G20 Mendorong Jalur Inovasi Aset Digital**: Para pejabat negara anggota G20 di bawah presidensi AS mengakui potensi aset digital dalam mendukung pertumbuhan ekonomi serta menyerukan perbaikan sistem transaksi lintas batas.
-    *   Kenapa penting: Dukungan dari blok ekonomi terbesar dunia ini memberikan kejelasan arah regulasi global jangka panjang untuk interoperabilitas keuangan internasional.
-*   **Ondo Mendesak Regulator AS Terkait Perdagangan *Stock Perpetuals***: Ondo meminta SEC dan CFTC mengizinkan *perpetual futures* berbasis saham perusahaan AS diperdagangkan di dalam negeri memanfaatkan kerangka hukum sekuritas yang ada.
-    *   Kenapa penting: Jika disetujui, inisiatif ini akan menjembatani aset pasar modal tradisional langsung ke dalam ekosistem derivatif *onchain*.
-*   **Permintaan Organik Bitcoin Berbalik Negatif**: Indikator permintaan *onchain* Bitcoin kembali merosot ke wilayah negatif setelah sempat pulih pada bulan Agustus, seiring penurunan harga di bawah $77.000 akibat tekanan di pasar saham dan obligasi.
-    *   Kenapa penting: Data ini menunjukkan bahwa daya serap pasar terhadap suplai Bitcoin sedang melemah, membuat harga lebih rentan terhadap sentimen makroekonomi eksternal.
+## Berita & Kebijakan Penting
+* Coinbase resmi meluncurkan produk derivatif crypto berjangka teratur (*regulated derivatives*) di Kanada dengan opsi *leverage* hingga 10x bagi investor yang memenuhi syarat.
+Kenapa penting: Langkah ini memperluas jangkauan kelembagaan platform perdagangan AS ke pasar Kanada di tengah ketidakpastian regulasi domestik.
+* Pemerintah Negara Bagian Wyoming mengintegrasikan verifikasi cadangan waktu-nyata berbasis Chainlink untuk stable token milik negara (FRNT).
+Kenapa penting: Integrasi ini memperkuat adopsi teknologi *oracle* dalam aset tertokenisasi publik dan meningkatkan standar transparansi cadangan obligasi atau kas.
+* Ondo mendesak SEC dan CFTC AS untuk mengizinkan perdagangan berjangka perpetual (*perpetual futures*) saham AS secara domestik di dalam negeri.
+Kenapa penting: Inisiatif ini berpotensi membuka kerangka hukum baru yang menjembatani derivatif keuangan tradisional dengan ekosistem DeFi berbasis sekuritas tertokenisasi.
+* Otoritas federal AS bekerja sama dengan CrowdStrike berhasil melumpuhkan *malware* yang bertanggung jawab atas pencurian crypto senilai $150.000 selama delapan tahun terakhir.
+Kenapa penting: Penindakan ini menegaskan fokus penegak hukum global terhadap infrastruktur keamanan cyber yang menyasar ekosistem aset digital.
+* G20 di bawah presidensi AS mengonfirmasi adanya jalur jelas (*clear pathways*) bagi inovasi aset digital untuk mendukung pertumbuhan ekonomi serta perbaikan transaksi lintas batas.
+Kenapa penting: Pernyataan kolektif ini memberikan arah kebijakan makro global yang positif bagi adopsi institusional.
 
 ## Rotasi Sektor
 
 ![2026 09 03 sektor 24 jam](aset/2026-09-03-sektor-24-jam.svg)
 
-Pasar memperlihatkan perpindahan modal yang jelas dalam 24 jam terakhir. Sektor Robinhood Chain Meme (+13,32%), Binance Wallet IDO (+12,25%), dan *Rollup* (+6,92%) memimpin penguatan, sedangkan sektor yang terikat ekuitas tradisional seperti BackedFi xStocks Ecosystem (-9,86%) dan *Stock market-themed* (-6,42%) mengalami tekanan terberat. Hal ini mengindikasikan bahwa para pelaku pasar sedang mengalihkan modal dari produk sekuritas tertokenisasi yang mengekor koreksi pasar saham global menuju sektor infrastruktur *Layer-2* dan aset spesifik yang memiliki momentum internal.
+Sektor Robinhood Chain Meme (+13,32%), Binance Wallet IDO (+12,25%), dan Cat-Themed (+9,24%) mencatatkan penguatan tertinggi dalam 24 jam terakhir. Di sisi sebaliknya, sektor BackedFi xStocks Ecosystem (-9,86%) serta sektor *Bridged-Tokens* (-6,42%) mengalami pelemahan paling dalam. Data ini mengindikasikan pergeseran modal jangka pendek yang keluar dari derivatif saham tertokenisasi menuju spekulasi ceruk serta ekosistem peluncuran token baru.
 
 ## Yang Sedang Ramai Dibicarakan
-Pembicaraan komunitas dan tren pencarian saat ini didominasi oleh koin bernilai kapitalisasi kecil hingga sedang seperti Pons (PONS), CashCat (CASHCAT), serta pembaruan ekosistem Arbitrum (ARB) dan Pump.fun (PUMP). Di forum Reddit, topik hangat berkisar pada langkah Arbitrum Nova yang meminta pengguna melakukan *bridging* pada token Moons, isu keamanan berupa *address poisoning* di dompet kripto, serta pernyataan Fidelity mengenai peran kecerdasan buatan dalam eksekusi perdagangan terdesentralisasi. Tingginya perhatian pada aset-aset spekulatif ini harus diperlakukan murni sebagai penanda arah perhatian dan emosi ritel, BUKAN sebagai indikator kualitas maupun fundamental jangka panjang dari aset tersebut.
+Perbincangan ritel di saluran Reddit r/CryptoCurrency dan daftar trending CoinGecko saat ini didominasi oleh perdebatan mengenai migrasi jaringan Arbitrum Nova yang mewajibkan penjembatanan (*bridging*) token Moons, kasus pemblokiran penarikan akun Kraken akibat *wallet address poisoning*, serta pernyataan Arthur Hayes yang lebih memilih Ethereum ketimbang Bitcoin. Perhatian ini harus diperlakukan secara eksplisit sebagai indikator perhatian ritel semata, BUKAN sebagai indikator kualitas teknis atau fundamental dari aset tersebut.
 
 ## Kandidat untuk Diteliti
 
 ![2026 09 03 peta gelembung](aset/2026-09-03-peta-gelembung.svg)
 
-*   **UNI (Uniswap)** — naik +33,80% dalam sepekan tetapi terkoreksi -1,29% hari ini dengan nilai kapitalisasi $3,6 miliar. Koreksi tipis ini merupakan tarikan napas teknis dari tren naik yang kuat (+49,60% dalam 30 hari). Alasan makro yang mendukung adalah meningkatnya preferensi penggunaan bursa terdesentralisasi di tengah ketatnya pengawasan terhadap bursa terpusat.
-*   **USDG (Global Dollar)** — volume perdagangan 24 jam mencapai $182,7 juta, relatif tinggi dibandingkan kapitalisasi pasarnya. Alasan mikro pemicu lonjakan volume ini belum diketahui dari data hari ini. Secara makro, peningkatan volume *stablecoin* memperlihatkan akumulasi likuiditas siap pakai oleh para pedagang.
-*   **ARB (Arbitrum)** — melesat +14,83% dalam 24 jam dan +37,00% dalam sepekan, dengan rasio volume terhadap kapitalisasi pasar mencapai 41,7% — hitungan saya sendiri dari data perdagangan harian. Penguatan didorong oleh sentimen migrasi token di ekosistemnya serta masuknya aliran dana ke sektor *Rollup* yang tumbuh +6,92% secara keseluruhan.
-*   **TRUMP (Official Trump)** — mencatatkan rasio volume harian yang tinggi mendekati 41% dari kapitalisasi pasarnya. Alasan mikro spesifik pemicu lonjakan aktivitas harian ini belum diketahui dari data hari ini. Kondisi makro ditopang oleh tingginya minat spekulasi pada aset bertema politik di tengah mendatarnya pergerakan aset utama.
-*   **CRV (Curve DAO)** — tumbuh +15,50% dalam 7 hari namun terkoreksi -3,22% dalam 24 jam terakhir. Koreksi ini merupakan penyesuaian wajar setelah penguatan +76,40% dalam 30 hari. Alasan makro didukung oleh kepulihan volume dan imbal hasil pada protokol keuangan terdesentralisasi (DeFi) utama.
+* **UNI (Uniswap)** — naik +33,80% sepekan dan +49,60% sebulan, meski terkoreksi -1,53% dalam 24 jam terakhir. Koreksi tipis ini mencerminkan tarikan napas teknis di tengah tren naik jangka menengah yang kuat. Kondisi ini didukung oleh bertahannya volume perdagangan protokol pertukaran terdesentralisasi di tengah volatilitas pasar.
+* **ARB (Arbitrum)** — melonjak +37,00% dalam sepekan dengan rasio volume 24 jam terhadap kapitalisasi pasar mencapai 42,6%. Secara mikro, lonjakan aktivitas ini terjadi bersamaan dengan pengumuman restrukturisasi jaringan Arbitrum Nova. Secara makro, sektor *Rollup* menguat +6,92% dalam 24 jam, mempertegas arus modal ke solusi Layer-2.
+* **CRV (Curve DAO)** — mencatatkan kenaikan +15,50% dalam 7 hari dan +76,40% dalam 30 hari, meski turun -3,26% hari ini. Penguatan bulanan yang signifikan ini menunjukkan pemulihan struktur akumulasi pada protokol likuiditas DeFi. Secara makro, tren sentimen positif pada sektor infrastruktur DeFi menopang daya tahan harganya.
+* **USDG (Global Dollar)** — mencatatkan volume transaksi 24 jam setara 53% dari total kapitalisasi pasarnya. Pemicu mikronya belum diketahui dari data hari ini. Secara makro, lonjakan volume pada stablecoin biasanya menandakan persiapan pergeseran modal besar atau kebutuhan likuiditas mendesak di platform perdagangan.
 
 Ini hasil pemindaian angka, bukan rekomendasi. Sinyal di sini baru layak ditindaklanjuti setelah dibedah mendalam — suplai, unlock, pendana, dan whitepaper-nya.
 
 ## Sisi Lain
-Pembacaan utama menekankan risiko penurunan harga akibat melemahnya permintaan *onchain* Bitcoin dan tekanan pasar makro. Namun, argumen sebaliknya menunjukkan bahwa koreksi Bitcoin di kisaran $77.000 bisa jadi sekadar konsolidasi wajar setelah rally panjang, bukan awal dari tren penurunan mendalam. Penguatan tajam pada sektor infrastruktur seperti *Rollup* (+6,92%) serta token DeFi seperti Arbitrum (+37,00% sepekan) memperlihatkan bahwa modal tidak keluar dari ekosistem kripto, melainkan aktif berputar mencari imbal hasil di tingkat aplikasi. Kalau aliran dana ke ekosistem *Layer-2* ini berhasil memicu peningkatan aktivitas transaksi nyata, likuiditas tersebut pada akhirnya akan mengalir kembali untuk menopang harga Bitcoin.
+Meskipun narasi koreksi Bitcoin terdorong oleh penurunan permintaan terwujud dan tekanan makro pasar saham, pembacaan bearish ini memiliki celah pelemahan. Penguatan signifikan pada sektor Rollup (+6,92%) serta lonjakan harga aset seperti ARB (+37,00% sepekan) dan UNI (+33,80% sepekan) menunjukkan bahwa modal tidak sepenuhnya keluar dari pasar, melainkan melakukan rotasi internal ke sektor utilitas. Kalau permintaan aset Layer-2 dan DeFi ini berhasil mempertahankan likuiditas ekosistem, maka tekanan pada Bitcoin berisiko tertahan dan bisa memicu pemulihan harga yang cepat (*bullish reversal*).
 
 ## Agenda yang Perlu Diperhatikan
-*   Keputusan Mahkamah Agung AS terkait petisi pejabat New Jersey atas pasar prediksi Kalshi (perkiraan).
-*   Tanggapan regulator SEC dan CFTC Amerika Serikat terhadap usulan perdagangan *perpetual futures* berbasis saham (perkiraan).
-*   Perkembangan integrasi orakel Chainlink pada token stabil FRNT di negara bagian Wyoming (perkiraan).
-*   Rilis data indikator ekonomi global yang mempengaruhi pergerakan pasar obligasi dan ekuitas (perkiraan).
+* Evaluasi lanjutan kebijakan suku bunga bank sentral global pasca-pernyataan G20 terkait aset digital (perkiraan).
+* Tanggapan Mahkamah Agung AS atas petisi otoritas New Jersey terkait perdagangan kontrak prediksi Kalshi (perkiraan).
+* Proses penghentian operasional (*wind down*) protokol Full Sail pada jaringan Sui pasca-insiden keamanan oracle Switchboard.
+* Batas waktu penjembatanan (*bridging*) token Moons akibat migrasi jaringan Arbitrum Nova (perkiraan).
 
 ## Catatan & Batas Laporan Ini
-Data rincian berita makro dunia dari sumber BBC World serta sorotan komunitas tertentu tidak tersedia dalam pemindaian hari ini. Laporan ini juga tidak memuat jadwal pembukaan kunci token dan data pendanaan proyek, karena sumber gratisnya sudah tidak tersedia — keduanya perlu ditelusuri manual. Laporan ini menyajikan situasi, bukan nasihat investasi.
+Data berita internasional umum dan beberapa poin sorotan komunitas tidak tersedia dalam rilis data hari ini. Laporan ini tidak memuat jadwal pembukaan kunci token dan data pendanaan proyek, karena sumber gratisnya sudah tidak tersedia — keduanya perlu ditelusuri manual. Laporan ini menyajikan situasi, bukan nasihat investasi.
