@@ -2,8 +2,14 @@ name: Laporan Harian
 
 on:
   schedule:
-    # 23:00 UTC = 06:00 WIB keesokan harinya
-    - cron: '0 23 * * *'
+    # GitHub menjalankan jadwal secara best-effort: saat antrean padat ia bisa
+    # tertunda lama atau dilewati sama sekali, dan menit ke-0 adalah waktu
+    # paling padat karena hampir semua orang memakainya. Karena itu jadwalnya
+    # digeser ke menit ganjil, lalu ada dua percobaan susulan yang otomatis
+    # melewati diri sendiri kalau laporan hari itu sudah terbit.
+    - cron: '7 23 * * *'    # 06:07 WIB
+    - cron: '23 0 * * *'    # 07:23 WIB - susulan pertama
+    - cron: '41 2 * * *'    # 09:41 WIB - susulan terakhir
   workflow_dispatch: {}
 
 permissions:
@@ -28,12 +34,27 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Cek apakah laporan hari ini sudah terbit
+        id: cek
+        run: |
+          TANGGAL=$(TZ=Asia/Jakarta date +%Y-%m-%d)
+          echo "tanggal=$TANGGAL" >> "$GITHUB_OUTPUT"
+          if [ -f "harian/$TANGGAL-briefing.md" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "perlu=false" >> "$GITHUB_OUTPUT"
+            echo "Laporan $TANGGAL sudah ada - percobaan susulan dilewati."
+          else
+            echo "perlu=true" >> "$GITHUB_OUTPUT"
+            echo "Laporan $TANGGAL belum ada - disusun sekarang."
+          fi
+
       - name: Susun laporan
+        if: steps.cek.outputs.perlu == 'true'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/buat-laporan.mjs
 
       - name: Simpan hasil ke repo
+        if: steps.cek.outputs.perlu == 'true'
         run: |
           git config user.name "laporan-harian-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
