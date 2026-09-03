@@ -39,9 +39,15 @@ jobs:
         run: |
           TANGGAL=$(TZ=Asia/Jakarta date +%Y-%m-%d)
           echo "tanggal=$TANGGAL" >> "$GITHUB_OUTPUT"
-          if [ -f "harian/$TANGGAL-briefing.md" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+
+          if [ -f "harian/$TANGGAL-briefing.md" ]; then ADA=ya; else ADA=tidak; fi
+
+          if [ "$ADA" = "ya" ] && [ "${{ github.event_name }}" = "schedule" ]; then
             echo "perlu=false" >> "$GITHUB_OUTPUT"
-            echo "Laporan $TANGGAL sudah ada - percobaan susulan dilewati."
+            echo "Laporan $TANGGAL sudah terbit - percobaan susulan terjadwal dilewati."
+          elif [ "$ADA" = "ya" ]; then
+            echo "perlu=true" >> "$GITHUB_OUTPUT"
+            echo "Laporan $TANGGAL sudah ada, tapi ini dijalankan manual - disusun ulang."
           else
             echo "perlu=true" >> "$GITHUB_OUTPUT"
             echo "Laporan $TANGGAL belum ada - disusun sekarang."
