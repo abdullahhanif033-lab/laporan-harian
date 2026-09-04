@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 430" width="100%" role="img" aria-label="Peta pasar — 30 koin teratas, perubahan 7 hari" style="max-width:840px;height:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+<rect width="840" height="430" rx="14" fill="#ffffff"/>
+<text x="40" y="30" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Peta pasar — 30 koin teratas, perubahan 7 hari</text>
+<text x="40" y="50" font-size="11.5" fill="#5b6472" font-weight="400" text-anchor="start">Luas lingkaran = kapitalisasi pasar · posisi mendatar = perubahan 7 hari</text>
+<line x1="420" y1="74" x2="420" y2="384" stroke="#e3e6ea" stroke-width="1.5"/>
+<text x="420" y="414" font-size="11" fill="#5b6472" font-weight="400" text-anchor="middle">0%</text>
+<text x="44" y="414" font-size="11" fill="#D03B3B" font-weight="400" text-anchor="start">−36%</text>
+<text x="796" y="414" font-size="11" fill="#0CA30C" font-weight="400" text-anchor="end">+36%</text>
+<circle cx="431.3" cy="229.0" r="41.0" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="431.2901408450704" y="227" font-size="14" fill="#0b0b0b" font-weight="700" text-anchor="middle">BTC</text>
+<text x="431.2901408450704" y="242" font-size="12" fill="#1BAF7A" font-weight="650" text-anchor="middle">+1,2%</text>
+<circle cx="423.1" cy="297.6" r="25.1" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="423.05783349346166" y="295.5807336665239" font-size="9.666256171021715" fill="#0b0b0b" font-weight="700" text-anchor="middle">ETH</text>
+<text x="423.05783349346166" y="310.5807336665239" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-0,3%</text>
+<circle cx="431.5" cy="165.2" r="19.8" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="431.4689530350404" y="163.24889546492147" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">BNB</text>
+<text x="431.4689530350404" y="178.24889546492147" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+1,8%</text>
+<circle cx="391.1" cy="178.5" r="19.6" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="391.0692138792644" y="176.5" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">XRP</text>
+<text x="391.0692138792644" y="191.5" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-0,1%</text>
+<circle cx="371.5" cy="247.2" r="18.4" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="371.4794366197183" y="245.1865334794732" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">SOL</text>
+<text x="371.4794366197183" y="260.1865334794732" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-4,8%</text>
+<circle cx="401.2" cy="138.0" r="16.9" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="401.1830985915493" y="136" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">TRX</text>
+<text x="401.1830985915493" y="151" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-2,0%</text>
+<circle cx="470.1" cy="277.0" r="16.3" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="470.12542716482136" y="275" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">FIGR_HELOC</text>
+<text x="470.12542716482136" y="290" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+2,5%</text>
+<circle cx="473.4" cy="183.5" r="16.0" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="473.44401187087885" y="181.49999999999994" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">HYPE</text>
+<text x="473.44401187087885" y="196.49999999999994" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+3,0%</text>
+<circle cx="579.9" cy="229.0" r="15.8" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="579.943661971831" y="227" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">ZEC</text>
+<text x="579.943661971831" y="242" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+17%</text>
+<circle cx="405.9" cy="340.0" r="15.6" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="405.88732394366195" y="338" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">DOGE</text>
+<text x="405.88732394366195" y="353" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-1,5%</text>
+<circle cx="379.8" cy="284.5" r="15.4" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="379.8303269533514" y="282.5" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">RAIN</text>
+<text x="379.8303269533514" y="297.5" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-1,0%</text>
+<circle cx="543.3" cy="229.0" r="15.2" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="543.2507042253521" y="227" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">XMR</text>
+<text x="543.2507042253521" y="242" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+13%</text>
+<circle cx="409.7" cy="103.0" r="15.1" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="409.6507042253521" y="101" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">LINK</text>
+<text x="409.6507042253521" y="116" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-1,1%</text>
+<circle cx="439.5" cy="128.5" r="15.1" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="439.50084507042254" y="126.54105316100512" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">WBT</text>
+<text x="439.50084507042254" y="141.54105316100512" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+0,1%</text>
+<circle cx="439.2" cy="338.1" r="15.0" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="439.2191549295775" y="336.1192008768393" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">LEO</text>
+<text x="439.2191549295775" y="351.1192008768393" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-0,1%</text>
+<circle cx="465.5" cy="312.1" r="15.0" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="465.46704225352113" y="310.1384387633061" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">ADA</text>
+<text x="465.46704225352113" y="325.1384387633061" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+3,2%</text>
+<circle cx="373.6" cy="318.1" r="14.8" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="373.61339824453023" y="316.095454429505" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">XLM</text>
+<text x="373.61339824453023" y="331.095454429505" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-1,9%</text>
+<circle cx="368.7" cy="210.8" r="14.6" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="368.65690140845066" y="208.8134665205268" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">BCH</text>
+<text x="368.65690140845066" y="223.8134665205268" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-5,1%</text>
+<circle cx="442.0" cy="92.8" r="14.5" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="442.0272110896736" y="90.80445849324136" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">CC</text>
+<text x="442.0272110896736" y="105.80445849324136" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+1,1%</text>
+<circle cx="473.3" cy="150.5" r="14.4" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="473.3417849804222" y="148.51114728829322" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">LTC</text>
+<text x="473.3417849804222" y="163.51114728829322" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+3,0%</text>
+<circle cx="754.0" cy="229.0" r="14.4" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="754" y="227" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">UNI</text>
+<text x="754" y="242" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+36%</text>
+<circle cx="366.9" cy="150.2" r="14.4" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="366.8653521126761" y="148.1916882556161" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">GRAM</text>
+<text x="366.8653521126761" y="163.1916882556161" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-4,1%</text>
+<circle cx="451.4" cy="368.4" r="14.3" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="451.4050704225352" y="366.43009000929464" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">HBAR</text>
+<text x="451.4050704225352" y="381.43009000929464" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">+0,6%</text>
+<circle cx="377.9" cy="360.5" r="14.3" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="377.9130043837767" y="358.5218613006979" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">USDG</text>
+<text x="377.9130043837767" y="373.5218613006979" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">0,0%</text>
+<circle cx="377.9" cy="97.5" r="14.2" fill="#1BAF7A" opacity="0.16" stroke="#1BAF7A" stroke-width="1.5"/>
+<text x="377.9130043837767" y="95.47813869930218" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">AVAX</text>
+<text x="377.9130043837767" y="110.47813869930218" font-size="8.5" fill="#1BAF7A" font-weight="650" text-anchor="middle">0,0%</text>
+<circle cx="351.4" cy="182.3" r="14.2" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="351.4377357672556" y="180.33095244168788" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">CRO</text>
+<text x="351.4377357672556" y="195.33095244168788" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-5,7%</text>
+<circle cx="343.9" cy="270.7" r="14.1" fill="#D03B3B" opacity="0.16" stroke="#D03B3B" stroke-width="1.5"/>
+<text x="343.8918394577562" y="268.6698662615059" font-size="9" fill="#0b0b0b" font-weight="700" text-anchor="middle">XAUT</text>
+<text x="343.8918394577562" y="283.6698662615059" font-size="8.5" fill="#D03B3B" font-weight="650" text-anchor="middle">-2,8%</text>
+<text x="800" y="50" font-size="10.5" fill="#5b6472" font-weight="400" text-anchor="end">3 koin tidak muat ditampilkan</text>
+</svg>
