@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 382" width="100%" role="img" aria-label="Sektor terkuat dan terlemah — 24 jam" style="max-width:840px;height:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+<rect width="840" height="382" rx="14" fill="#ffffff"/>
+<text x="30" y="30" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Sektor terkuat dan terlemah — 24 jam</text>
+<line x1="396" y1="50" x2="396" y2="364" stroke="#e3e6ea" stroke-width="1.5"/>
+<text x="30" y="72" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Masternodes</text>
+<rect x="396.0" y="61" width="190.0" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="594" y="73" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +16,54%</text>
+<text x="816" y="73" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$1,6 mlr</text>
+<text x="30" y="102" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Data Availability</text>
+<rect x="396.0" y="91" width="125.5" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="529.5015902331011" y="103" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +10,93%</text>
+<text x="816" y="103" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$3,8 mlr</text>
+<text x="30" y="132" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">BackedFi xStocks Ecos…</text>
+<rect x="396.0" y="121" width="114.1" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="518.1220091771763" y="133" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +9,94%</text>
+<text x="816" y="133" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$834,4 jt</text>
+<text x="30" y="162" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Stock market-themed</text>
+<rect x="396.0" y="151" width="90.6" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="494.64654889914664" y="163" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +7,89%</text>
+<text x="816" y="163" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$624,9 jt</text>
+<text x="30" y="192" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Quantum-Resistant</text>
+<rect x="396.0" y="181" width="84.8" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="488.83530101328745" y="193" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +7,39%</text>
+<text x="816" y="193" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$18,5 mlr</text>
+<text x="30" y="222" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Payment Solutions</text>
+<rect x="396.0" y="211" width="75.4" height="15" rx="3" fill="#1BAF7A" opacity="0.85"/>
+<text x="479.4416127584055" y="223" font-size="11.5" fill="#1BAF7A" font-weight="650" text-anchor="start">▲ +6,57%</text>
+<text x="816" y="223" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$3,0 mlr</text>
+<text x="30" y="252" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Binance Wallet IDO</text>
+<rect x="333.2" y="241" width="62.8" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="325.1619548966915" y="253" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -5,47%</text>
+<text x="816" y="253" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$1,7 mlr</text>
+<text x="30" y="282" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Superstate Ecosystem</text>
+<rect x="320.9" y="271" width="75.1" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="312.93470358756775" y="283" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -6,54%</text>
+<text x="816" y="283" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$782,2 jt</text>
+<text x="30" y="312" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Pons Launchpad</text>
+<rect x="319.4" y="301" width="76.6" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="311.41405260116824" y="313" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -6,67%</text>
+<text x="816" y="313" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$508,2 jt</text>
+<text x="30" y="342" font-size="12" fill="#0b0b0b" font-weight="600" text-anchor="start">Cat-Themed</text>
+<rect x="311.6" y="331" width="84.4" height="15" rx="3" fill="#D03B3B" opacity="0.85"/>
+<text x="303.6336313664998" y="343" font-size="11.5" fill="#D03B3B" font-weight="650" text-anchor="end">▼ -7,34%</text>
+<text x="816" y="343" font-size="11" fill="#5b6472" font-weight="400" text-anchor="end">$825,1 jt</text>
+</svg>
